@@ -4,12 +4,13 @@ if(b&&m){
  const close=()=>{b.setAttribute('aria-expanded','false');m.hidden=true;document.body.classList.remove('mobile-menu-open');};
  const openMenu=()=>{
   b.setAttribute('aria-expanded','true');m.hidden=false;document.body.classList.add('mobile-menu-open');
-  const wa=document.body.dataset.whatsapp||'';const tg=document.body.dataset.telegram||'';
+  const wa=document.body.dataset.whatsapp||'';const tg=document.body.dataset.telegram||'';const home=document.body.dataset.homeUrl||'/';const phone=document.body.dataset.phone||'';
   let social='';
   if(wa){social+='<a class="mobile-social mobile-whatsapp" href="'+wa+'" target="_blank" rel="noopener noreferrer"><span>◉</span><span>WhatsApp</span></a>';}
   if(tg){social+='<a class="mobile-social mobile-telegram" href="'+tg+'" target="_blank" rel="noopener noreferrer"><span>➤</span><span>Telegram</span></a>';}
-  m.innerHTML='<nav class="mobile-nav" aria-label="Мобильное меню"><div class="mobile-nav-title"><span>АвтоСпа</span><small>Услуги и запись</small></div><a href="#services"><span class="mobile-nav-icon">🚿</span><span>Услуги</span></a><a href="#engine-wash"><span class="mobile-nav-icon">🔧</span><span>Мойка двигателя</span></a><a class="mobile-tire-link" href="#tire-booking"><span class="mobile-nav-icon">🛞</span><span>Шиномонтаж</span><em>Запись</em></a><a href="#contacts"><span class="mobile-nav-icon">📍</span><span>Контакты</span></a><a class="mobile-nav-external" href="https://xn----7sbbgabsz5cgqkebg.su/" target="_blank" rel="noopener noreferrer"><span class="mobile-nav-icon">🔧</span><span>Автосервис Автотех ↗</span></a>'+social+'<a class="mobile-call" href="tel:+79162999859"><span>☎ Позвонить</span><strong>+7 916 299-98-59</strong></a></nav>';
-  m.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',close));
+  const link=(id)=>home+'#'+id;
+  m.innerHTML='<nav class="mobile-nav" aria-label="Мобильное меню"><div class="mobile-nav-title"><span>АвтоСпа</span><small>Услуги и запись</small></div><a href="'+link('services')+'"><span class="mobile-nav-icon">🚿</span><span>Услуги</span></a><a href="'+link('engine-wash')+'"><span class="mobile-nav-icon">🔧</span><span>Мойка двигателя</span></a><a class="mobile-tire-link" href="'+link('tire-booking')+'"><span class="mobile-nav-icon">🛞</span><span>Шиномонтаж</span><em>Запись</em></a><a href="'+link('contacts')+'"><span class="mobile-nav-icon">📍</span><span>Контакты</span></a><a class="mobile-nav-external" href="https://xn----7sbbgabsz5cgqkebg.su/" target="_blank" rel="noopener noreferrer"><span class="mobile-nav-icon">🔧</span><span>Автосервис Автотех ↗</span></a>'+social+'<a class="mobile-call" href="tel:'+phone+'"><span>☎ Позвонить</span><strong>'+phone.replace('+7','+7 ')+'</strong></a></nav>';
+  m.querySelectorAll('.mobile-nav a[href*="#"]').forEach(a=>a.addEventListener('click',close));
   const panel=m.querySelector('.mobile-nav');if(panel){panel.querySelectorAll('a').forEach((a,i)=>{a.style.setProperty('--mobile-delay',(i*40)+'ms');});}
  };
  b.addEventListener('click',function(){const open=b.getAttribute('aria-expanded')==='true';if(open)close();else openMenu();});
