@@ -1,0 +1,26 @@
+/* АвтоСпа — premium services layer. Только светлая палитра. */
+#services{position:relative;overflow:hidden;background:linear-gradient(180deg,#ffffff 0%,#f5fffd 100%)}
+#services:before{content:"";position:absolute;width:360px;height:360px;border-radius:50%;right:-190px;top:40px;background:rgba(88,185,232,.11);pointer-events:none}
+#services:after{content:"";position:absolute;width:260px;height:260px;border-radius:50%;left:-150px;bottom:-100px;background:rgba(243,154,203,.10);pointer-events:none}
+#services .container{position:relative;z-index:1}
+#services .section-head{margin-bottom:30px}
+#services .section-head:after{content:"3 направления • 1 место для заботы об автомобиле";display:inline-flex;margin-top:16px;padding:9px 14px;border-radius:999px;background:#e8f7ff;border:1px solid #ccecf8;color:#2789b4;font-size:12px;font-weight:900}
+#services .cards{gap:20px;align-items:stretch}
+#services .card{position:relative;overflow:hidden;border:1px solid #d8f0ee;background:linear-gradient(145deg,#ffffff 0%,#f7fffd 100%);box-shadow:0 14px 34px rgba(47,145,151,.09);transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease}
+#services .card:before{content:"";position:absolute;right:-55px;top:-55px;width:140px;height:140px;border-radius:50%;background:rgba(88,185,232,.09);transition:transform .35s ease}
+#services .card:hover{transform:translateY(-8px);box-shadow:0 24px 48px rgba(47,145,151,.15);border-color:#b8e5df}
+#services .card:hover:before{transform:scale(1.35)}
+#services .service-icon{position:relative;width:64px;height:64px;display:flex;align-items:center;justify-content:center;border-radius:20px;background:linear-gradient(135deg,#dff9f4,#e8f7ff);border:1px solid #cceee9;font-size:31px;box-shadow:0 10px 22px rgba(24,183,173,.10);transition:transform .3s ease}
+#services .card:hover .service-icon{transform:rotate(-5deg) scale(1.06)}
+#services .card h3{position:relative;margin-top:22px;font-size:23px}
+#services .card p{position:relative}
+#services .engine-wash-card{background:linear-gradient(145deg,#fff9f0 0%,#f4fffc 100%);border-color:#f4dfc9}
+#services .engine-wash-card .service-icon{background:linear-gradient(135deg,#fff0df,#dff9f4);border-color:#f5dcc3}
+#services .tire-service-card{background:linear-gradient(145deg,#fff5e9 0%,#f1fffb 100%);border-color:#f2dcc6;box-shadow:0 16px 38px rgba(255,155,82,.12)}
+#services .tire-service-card .service-icon{background:linear-gradient(135deg,#fff0df,#fff9d9);border-color:#f4dec1}
+#services .card .button{position:relative}
+#services .card .button-primary{box-shadow:0 10px 22px rgba(24,183,173,.16)}
+#services .card .button-secondary{background:#ffffff}
+@media(max-width:900px){#services .cards{gap:16px}#services .card{padding:24px}}
+@media(max-width:700px){#services .section-head:after{font-size:11px;max-width:100%;white-space:normal}#services .card{border-radius:24px}#services .service-icon{width:58px;height:58px;font-size:28px}}
+@media(prefers-reduced-motion:reduce){#services .card,#services .card:before,#services .service-icon{transition:none}}
