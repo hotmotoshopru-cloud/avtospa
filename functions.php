@@ -14,8 +14,60 @@ function avtospa_assets() {
     $version = wp_get_theme()->get('Version');
     wp_enqueue_style('avtospa-style', get_stylesheet_uri(), array(), $version);
     wp_enqueue_script('avtospa-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), $version, true);
+
+    $interactive_css = '
+    :root{--avtospa-glow:rgba(24,183,173,.16)}
+    .avtospa-progress{position:fixed;left:0;top:0;height:4px;width:0;background:linear-gradient(90deg,#18b7ad,#58b9e8,#ff9b52,#f39acb);z-index:9999;pointer-events:none;border-radius:0 99px 99px 0}
+    .avtospa-reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
+    .avtospa-reveal.is-visible{opacity:1;transform:none}
+    .avtospa-floating-book{position:fixed;right:22px;bottom:22px;z-index:45;display:flex;align-items:center;gap:9px;padding:13px 17px;border-radius:999px;background:#ff9b52;color:#fff;font-weight:900;box-shadow:0 14px 32px rgba(255,155,82,.28);border:2px solid rgba(255,255,255,.9);transition:transform .2s ease,box-shadow .2s ease}
+    .avtospa-floating-book:hover{transform:translateY(-4px);box-shadow:0 18px 38px rgba(255,155,82,.34)}
+    .avtospa-floating-book .dot{width:9px;height:9px;border-radius:50%;background:#fff;box-shadow:0 0 0 6px rgba(255,255,255,.18);animation:avtospaPulse 1.8s infinite}
+    .avtospa-active-section{box-shadow:inset 4px 0 0 #18b7ad}
+    @keyframes avtospaPulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(.72);opacity:.65}}
+    @media(max-width:760px){.avtospa-floating-book{display:none}}
+    @media(prefers-reduced-motion:reduce){.avtospa-reveal{opacity:1;transform:none;transition:none}.avtospa-floating-book .dot{animation:none}}
+    ';
+    wp_add_inline_style('avtospa-style', $interactive_css);
+
+    $interactive_js = "
+    document.addEventListener('DOMContentLoaded',function(){
+      var bar=document.createElement('div');
+      bar.className='avtospa-progress';
+      bar.setAttribute('aria-hidden','true');
+      document.body.appendChild(bar);
+      var updateProgress=function(){
+        var doc=document.documentElement;
+        var max=doc.scrollHeight-window.innerHeight;
+        bar.style.width=(max>0?(window.scrollY/max)*100:0)+'%';
+      };
+      window.addEventListener('scroll',updateProgress,{passive:true});
+      updateProgress();
+
+      var revealItems=document.querySelectorAll('.section,.tire-booking-banner,.hero-grid > div,.card,.benefit,.faq details,.contact-card,.autotech-banner-inner');
+      if('IntersectionObserver' in window){
+        revealItems.forEach(function(el){el.classList.add('avtospa-reveal')});
+        var observer=new IntersectionObserver(function(entries,obs){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('is-visible');obs.unobserve(entry.target)}})},{threshold:.12});
+        revealItems.forEach(function(el){observer.observe(el)});
+      }
+
+      var sections=document.querySelectorAll('main section[id]');
+      var navLinks=document.querySelectorAll('.main-nav a[href*="#"]');
+      if('IntersectionObserver' in window && sections.length && navLinks.length){
+        var sectionObserver=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){navLinks.forEach(function(link){link.classList.remove('avtospa-nav-active');if(link.getAttribute('href').indexOf('#'+entry.target.id)>-1){link.classList.add('avtospa-nav-active')}})}})},{rootMargin:'-35% 0px -55% 0px',threshold:0});
+        sections.forEach(function(section){sectionObserver.observe(section)});
+      }
+    });
+    ";
+    wp_add_inline_script('avtospa-navigation', $interactive_js, 'after');
 }
 add_action('wp_enqueue_scripts','avtospa_assets');
+
+function avtospa_floating_booking() {
+    if (!is_front_page()) { return; }
+    echo '<a class="avtospa-floating-book" href="#tire-booking" aria-label="Записаться на шиномонтаж"><span class="dot" aria-hidden="true"></span>🛞 Записаться на шиномонтаж</a>';
+}
+add_action('wp_footer','avtospa_floating_booking',20);
 
 function avtospa_customize_register($wp_customize) {
     $wp_customize->add_section('avtospa_contacts', array('title'=>'АвтоСпа — контакты','priority'=>30));
