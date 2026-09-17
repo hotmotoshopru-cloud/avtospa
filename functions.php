@@ -35,7 +35,7 @@ function avtospa_phone_href() {
 }
 
 function avtospa_fallback_menu() {
-    echo '<ul><li><a href="' . esc_url(home_url('/#services')) . '">Услуги</a></li><li><a href="' . esc_url(home_url('/#tire-service')) . '">Шиномонтаж</a></li><li><a href="' . esc_url(home_url('/#contacts')) . '">Контакты</a></li></ul>';
+    echo '<ul><li><a href="' . esc_url(home_url('/#services')) . '">Услуги</a></li><li><a href="' . esc_url(home_url('/#engine-wash')) . '">Мойка двигателя</a></li><li><a href="' . esc_url(home_url('/#tire-service')) . '">Шиномонтаж</a></li><li><a href="' . esc_url(home_url('/#contacts')) . '">Контакты</a></li></ul>';
 }
 
 function avtospa_has_seo_plugin() {
@@ -45,7 +45,7 @@ function avtospa_has_seo_plugin() {
 function avtospa_head_seo() {
     if (avtospa_has_seo_plugin()) { return; }
     if (is_front_page() || is_home()) {
-        echo '<meta name="description" content="' . esc_attr('АвтоSPA в Москве — автомойка и шиномонтаж. Полярный проезд, 18, стр. 2. Запись и контакты на сайте.') . '">\n';
+        echo '<meta name="description" content="' . esc_attr('АвтоSPA в Москве — автомойка, мойка двигателя и шиномонтаж. Полярный проезд, 18, стр. 2. Запись и контакты на сайте.') . '">\n';
     }
 }
 add_action('wp_head','avtospa_head_seo',2);
@@ -60,7 +60,16 @@ function avtospa_schema() {
         'name'=>'АвтоSPA',
         'url'=>home_url('/'),
         'telephone'=>$phone,
-        'address'=>array('@type'=>'PostalAddress','streetAddress'=>$address,'addressLocality'=>'Москва','addressCountry'=>'RU')
+        'address'=>array('@type'=>'PostalAddress','streetAddress'=>$address,'addressLocality'=>'Москва','addressCountry'=>'RU'),
+        'hasOfferCatalog'=>array(
+            '@type'=>'OfferCatalog',
+            'name'=>'Услуги АвтоSPA',
+            'itemListElement'=>array(
+                array('@type'=>'Offer','itemOffered'=>array('@type'=>'Service','name'=>'Автомойка')),
+                array('@type'=>'Offer','itemOffered'=>array('@type'=>'Service','name'=>'Мойка двигателя')),
+                array('@type'=>'Offer','itemOffered'=>array('@type'=>'Service','name'=>'Шиномонтаж'))
+            )
+        )
     );
     foreach (array('avtospa_whatsapp','avtospa_telegram') as $field) {
         $url = get_theme_mod($field,'');
