@@ -1,6 +1,6 @@
 <?php
 /** АвтоSPA theme functions. */
-if (!defined('ABSPATH')) exit;
+if (!defined('ABSPATH')) { exit; }
 
 function avtospa_setup() {
     add_theme_support('title-tag');
@@ -11,47 +11,61 @@ function avtospa_setup() {
 add_action('after_setup_theme','avtospa_setup');
 
 function avtospa_assets() {
-    wp_enqueue_style('avtospa-style', get_stylesheet_uri(), array(), '1.0.0');
-    wp_enqueue_script('avtospa-navigation', get_template_directory_uri().'/assets/js/navigation.js', array(), '1.0.0', true);
+    $version = wp_get_theme()->get('Version');
+    wp_enqueue_style('avtospa-style', get_stylesheet_uri(), array(), $version);
+    wp_enqueue_script('avtospa-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), $version, true);
 }
 add_action('wp_enqueue_scripts','avtospa_assets');
 
 function avtospa_customize_register($wp_customize) {
     $wp_customize->add_section('avtospa_contacts', array('title'=>'АвтоSPA — контакты','priority'=>30));
-    $fields = array(
-        'phone'=>array('Телефон','+7 916 299-98-59'),
-        'address'=>array('Адрес','Россия, Москва, Полярный проезд, 18, стр. 2'),
-        'whatsapp'=>array('WhatsApp URL',''),
-        'telegram'=>array('Telegram URL',''),
-    );
-    foreach($fields as $id=>$data){
-        $wp_customize->add_setting('avtospa_'.$id,array('default'=>$data[1],'sanitize_callback'=>'sanitize_text_field'));
-        $wp_customize->add_control('avtospa_'.$id,array('label'=>$data[0],'section'=>'avtospa_contacts','type'=>'text'));
-    }
+    $wp_customize->add_setting('avtospa_phone', array('default'=>'+7 916 299-98-59','sanitize_callback'=>'sanitize_text_field'));
+    $wp_customize->add_control('avtospa_phone', array('label'=>'Телефон','section'=>'avtospa_contacts','type'=>'text'));
+    $wp_customize->add_setting('avtospa_address', array('default'=>'Россия, Москва, Полярный проезд, 18, стр. 2','sanitize_callback'=>'sanitize_text_field'));
+    $wp_customize->add_control('avtospa_address', array('label'=>'Адрес','section'=>'avtospa_contacts','type'=>'text'));
+    $wp_customize->add_setting('avtospa_whatsapp', array('default'=>'','sanitize_callback'=>'esc_url_raw'));
+    $wp_customize->add_control('avtospa_whatsapp', array('label'=>'WhatsApp URL','section'=>'avtospa_contacts','type'=>'url'));
+    $wp_customize->add_setting('avtospa_telegram', array('default'=>'','sanitize_callback'=>'esc_url_raw'));
+    $wp_customize->add_control('avtospa_telegram', array('label'=>'Telegram URL','section'=>'avtospa_contacts','type'=>'url'));
 }
 add_action('customize_register','avtospa_customize_register');
 
-function avtospa_phone_href(){ return preg_replace('/[^0-9+]/','',get_theme_mod('avtospa_phone','+7 916 299-98-59')); }
-
-function avtospa_fallback_menu(){
-    echo '<ul><li><a href="#services">Услуги</a></li><li><a href="#tire-service">Шиномонтаж</a></li><li><a href="#contacts">Контакты</a></li></ul>';
+function avtospa_phone_href() {
+    return preg_replace('/[^0-9+]/','', (string) get_theme_mod('avtospa_phone','+7 916 299-98-59'));
 }
 
-function avtospa_fallback_description(){
-    return 'АвтоSPA в Москве — автомойка и шиномонтаж. Полярный проезд, 18, стр. 2. Запись и контакты на сайте.';
+function avtospa_fallback_menu() {
+    echo '<ul><li><a href="' . esc_url(home_url('/#services')) . '">Услуги</a></li><li><a href="' . esc_url(home_url('/#tire-service')) . '">Шиномонтаж</a></li><li><a href="' . esc_url(home_url('/#contacts')) . '">Контакты</a></li></ul>';
 }
-function avtospa_head_seo(){
-    if (defined('WPSEO_VERSION') || class_exists('RankMath')) return;
-    if (is_front_page() || is_home()) echo '<meta name="description" content="'.esc_attr(avtospa_fallback_description()).'">\n';
-    echo '<meta name="robots" content="index,follow,max-image-preview:large">\n';
+
+function avtospa_has_seo_plugin() {
+    return defined('WPSEO_VERSION') || defined('AIOSEO_VERSION') || class_exists('RankMath');
+}
+
+function avtospa_head_seo() {
+    if (avtospa_has_seo_plugin()) { return; }
+    if (is_front_page() || is_home()) {
+        echo '<meta name="description" content="' . esc_attr('АвтоSPA в Москве — автомойка и шиномонтаж. Полярный проезд, 18, стр. 2. Запись и контакты на сайте.') . '">\n';
+    }
 }
 add_action('wp_head','avtospa_head_seo',2);
 
-function avtospa_schema(){
-    if (!is_front_page()) return;
+function avtospa_schema() {
+    if (!is_front_page()) { return; }
     $phone = get_theme_mod('avtospa_phone','+7 916 299-98-59');
     $address = get_theme_mod('avtospa_address','Россия, Москва, Полярный проезд, 18, стр. 2');
-    $data = array('@context'=>'https://schema.org','@type'=>'AutoWash','name'=>'АвтоSPA','url'=>home_url('/'),'telephone'=>$phone,'address'=>array('@type'=>'PostalAddress','streetAddress'=>'Полярный проезд, 18, стр. 2','addressLocality'=>'Москва','addressCountry'=>'RU'));
-    echo '<script type="application/ld+json">'.wp_json_encode($data, JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES).'</script>';
+    $data = array(
+        '@context'=>'https://schema.org',
+        '@type'=>'LocalBusiness',
+        'name'=>'АвтоSPA',
+        'url'=>home_url('/'),
+        'telephone'=>$phone,
+        'address'=>array('@type'=>'PostalAddress','streetAddress'=>$address,'addressLocality'=>'Москва','addressCountry'=>'RU')
+    );
+    foreach (array('avtospa_whatsapp','avtospa_telegram') as $field) {
+        $url = get_theme_mod($field,'');
+        if ($url) { $data['sameAs'][] = esc_url_raw($url); }
+    }
+    echo '<script type="application/ld+json">' . wp_json_encode($data, JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES) . '</script>\n';
 }
 add_action('wp_head','avtospa_schema',20);
