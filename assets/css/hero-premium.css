@@ -1,0 +1,28 @@
+/* АвтоСпа — premium first-screen layer. Light palette only. */
+.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#f7fffd 0%,#eefaff 48%,#fff7ef 100%)}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;pointer-events:none;filter:blur(2px)}
+.hero:before{width:420px;height:420px;right:-180px;top:-180px;background:rgba(88,185,232,.14)}
+.hero:after{width:300px;height:300px;left:-160px;bottom:-180px;background:rgba(243,154,203,.12)}
+.hero .container{position:relative;z-index:1}
+.hero-grid{align-items:center;gap:42px}
+.hero-grid>div:first-child{position:relative}
+.hero-grid>div:first-child:before{content:"✦";position:absolute;left:-24px;top:18px;color:#ffb35c;font-size:28px;animation:heroStar 3s ease-in-out infinite}
+.hero h1{max-width:720px;letter-spacing:-.035em;line-height:1.03}
+.hero p{max-width:650px}
+.hero-buttons{gap:12px;flex-wrap:wrap}
+.hero-buttons .button{min-height:52px;display:inline-flex;align-items:center;justify-content:center}
+.hero-buttons .button-primary{box-shadow:0 14px 30px rgba(24,183,173,.20)}
+.hero-buttons .button-primary:hover{transform:translateY(-3px);box-shadow:0 18px 36px rgba(24,183,173,.27)}
+.quick-actions{position:relative;z-index:2}
+.quick-action{display:inline-flex;align-items:center;gap:6px}
+.hero-visual{transition:transform .35s ease,box-shadow .35s ease}
+.hero-visual:hover{transform:translateY(-5px);box-shadow:0 30px 70px rgba(24,183,173,.19)}
+.hero-visual:before{animation:heroOrb 8s ease-in-out infinite}
+.hero-visual:after{animation:heroOrb 7s ease-in-out infinite reverse}
+.hero-visual-brand strong{letter-spacing:-.03em}
+.hero-mini-cta{display:inline-flex;align-items:center;gap:5px}
+@keyframes heroStar{0%,100%{transform:translateY(0) rotate(0);opacity:.7}50%{transform:translateY(-7px) rotate(12deg);opacity:1}}
+@keyframes heroOrb{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-14px,12px) scale(1.08)}}
+@media(max-width:900px){.hero-grid{gap:28px}.hero-grid>div:first-child:before{display:none}.hero h1{letter-spacing:-.025em}}
+@media(max-width:700px){.hero{padding-top:26px}.hero-grid{gap:22px}.hero h1{font-size:clamp(34px,10vw,48px)}.hero-buttons .button{width:100%}.hero-buttons .button-secondary{order:2}.hero-visual:hover{transform:none}}
+@media(prefers-reduced-motion:reduce){.hero-visual,.hero-visual:before,.hero-visual:after{animation:none;transition:none}.hero-grid>div:first-child:before{animation:none}}
