@@ -8,19 +8,23 @@
 #services .cards{gap:20px;align-items:stretch}
 #services .card{position:relative;overflow:hidden;border:1px solid #d8f0ee;background:linear-gradient(145deg,#ffffff 0%,#f7fffd 100%);box-shadow:0 14px 34px rgba(47,145,151,.09);transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease}
 #services .card:before{content:"";position:absolute;right:-55px;top:-55px;width:140px;height:140px;border-radius:50%;background:rgba(88,185,232,.09);transition:transform .35s ease}
+#services .card:after{content:"";position:absolute;left:-42px;bottom:-58px;width:105px;height:105px;border-radius:50%;border:12px solid rgba(24,183,173,.06);pointer-events:none;transition:transform .35s ease}
 #services .card:hover{transform:translateY(-8px);box-shadow:0 24px 48px rgba(47,145,151,.15);border-color:#b8e5df}
 #services .card:hover:before{transform:scale(1.35)}
-#services .service-icon{position:relative;width:64px;height:64px;display:flex;align-items:center;justify-content:center;border-radius:20px;background:linear-gradient(135deg,#dff9f4,#e8f7ff);border:1px solid #cceee9;font-size:31px;box-shadow:0 10px 22px rgba(24,183,173,.10);transition:transform .3s ease}
-#services .card:hover .service-icon{transform:rotate(-5deg) scale(1.06)}
+#services .card:hover:after{transform:scale(1.12) rotate(12deg)}
+#services .service-icon{position:relative;width:64px;height:64px;display:flex;align-items:center;justify-content:center;border-radius:20px;background:linear-gradient(135deg,#dff9f4,#e8f7ff);border:1px solid #cceee9;font-size:31px;box-shadow:0 10px 22px rgba(24,183,173,.10);transition:transform .3s ease,box-shadow .3s ease}
+#services .card:hover .service-icon{transform:rotate(-5deg) scale(1.06);box-shadow:0 14px 28px rgba(24,183,173,.16)}
 #services .card h3{position:relative;margin-top:22px;font-size:23px}
 #services .card p{position:relative}
+#services .card .button{position:relative;z-index:2;transition:transform .2s ease,box-shadow .2s ease}
+#services .card .button:hover{transform:translateY(-2px)}
 #services .engine-wash-card{background:linear-gradient(145deg,#fff9f0 0%,#f4fffc 100%);border-color:#f4dfc9}
 #services .engine-wash-card .service-icon{background:linear-gradient(135deg,#fff0df,#dff9f4);border-color:#f5dcc3}
+#services .engine-wash-card:hover{border-color:#efc99f;box-shadow:0 24px 48px rgba(255,155,82,.15)}
 #services .tire-service-card{background:linear-gradient(145deg,#fff5e9 0%,#f1fffb 100%);border-color:#f2dcc6;box-shadow:0 16px 38px rgba(255,155,82,.12)}
 #services .tire-service-card .service-icon{background:linear-gradient(135deg,#fff0df,#fff9d9);border-color:#f4dec1}
-#services .card .button{position:relative}
-#services .card .button-primary{box-shadow:0 10px 22px rgba(24,183,173,.16)}
-#services .card .button-secondary{background:#ffffff}
+#services .tire-service-card:hover{border-color:#ffc18f;box-shadow:0 26px 52px rgba(255,155,82,.18)}
+#services .tire-service-card .button-primary{background:linear-gradient(135deg,#18b7ad,#28c8bd)!important}
 @media(max-width:900px){#services .cards{gap:16px}#services .card{padding:24px}}
 @media(max-width:700px){#services .section-head:after{font-size:11px;max-width:100%;white-space:normal}#services .card{border-radius:24px}#services .service-icon{width:58px;height:58px;font-size:28px}}
-@media(prefers-reduced-motion:reduce){#services .card,#services .card:before,#services .service-icon{transition:none}}
+@media(prefers-reduced-motion:reduce){#services .card,#services .card:before,#services .card:after,#services .service-icon,#services .card .button{transition:none}}
