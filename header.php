@@ -10,7 +10,7 @@
 <?php wp_body_open(); ?>
 <header class="site-header">
   <div class="container header-inner">
-    <a class="brand" href="<?php echo esc_url(home_url('/')); ?>" aria-label="АвтоSPA — главная">Авто<span>SPA</span></a>
+    <a class="brand" href="<?php echo esc_url(home_url('/')); ?>" aria-label="АвтоСпа — главная">АвтоСпа</a>
     <nav class="main-nav" aria-label="Основное меню">
       <?php wp_nav_menu(array('theme_location'=>'primary','container'=>false,'fallback_cb'=>'avtospa_fallback_menu')); ?>
       <a class="nav-external" href="https://xn----7sbbgabsz5cgqkebg.su/" target="_blank" rel="noopener noreferrer">Автосервис Автотех</a>
