@@ -14,9 +14,10 @@
 
 <section id="services" class="section">
  <div class="container">
-  <div class="section-head"><div><h2>Услуги</h2><p class="section-intro">На главной странице выделены два подтвержденных направления: автомойка и шиномонтаж. Актуальный перечень и условия можно уточнить по телефону.</p></div></div>
+  <div class="section-head"><div><h2>Услуги</h2><p class="section-intro">На главной странице выделены основные направления АвтоSPA: автомойка, мойка двигателя и шиномонтаж. Актуальный перечень и условия можно уточнить по телефону.</p></div></div>
   <div class="cards">
    <article class="card"><div class="service-icon">🚿</div><h3>Автомойка</h3><p>Уточните доступные виды мойки и актуальные условия по телефону.</p></article>
+   <article class="card engine-wash-card"><div class="service-icon">🔧</div><h3>Мойка двигателя</h3><p>Одна из важных услуг автомойки АвтоSPA. Актуальные условия и возможность выполнения услуги уточняйте по телефону.</p><a class="button button-secondary" style="margin-top:18px" href="#contacts">Уточнить условия</a></article>
    <article class="card"><div class="service-icon">🛞</div><h3>Шиномонтаж</h3><p>Запишитесь на шиномонтаж по телефону и согласуйте удобное время.</p><a class="button button-primary" style="margin-top:18px" href="#tire-service">Записаться</a></article>
   </div>
  </div>
@@ -41,7 +42,7 @@
 
 <section class="section alt">
  <div class="container"><div class="section-head"><div><h2>АвтоSPA в Москве</h2><p class="section-intro">Контактная информация и основные действия собраны в одном месте.</p></div></div>
-  <div class="benefits"><div class="benefit"><strong>Телефон</strong><span>Позвоните для записи и уточнения условий.</span></div><div class="benefit"><strong>Адрес</strong><span>Полярный проезд, 18, стр. 2, Москва.</span></div><div class="benefit"><strong>Шиномонтаж</strong><span>Отдельный блок для быстрой записи.</span></div><div class="benefit"><strong>Автомойка</strong><span>Основное направление АвтоSPA.</span></div></div>
+  <div class="benefits"><div class="benefit"><strong>Телефон</strong><span>Позвоните для записи и уточнения условий.</span></div><div class="benefit"><strong>Адрес</strong><span>Полярный проезд, 18, стр. 2, Москва.</span></div><div class="benefit"><strong>Шиномонтаж</strong><span>Отдельный блок для быстрой записи.</span></div><div class="benefit"><strong>Мойка двигателя</strong><span>Важная услуга автомойки, вынесенная на главную.</span></div></div>
  </div>
 </section>
 
