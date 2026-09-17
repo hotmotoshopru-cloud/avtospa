@@ -17,8 +17,22 @@
   <div class="section-head"><div><h2>Услуги</h2><p class="section-intro">На главной странице выделены основные направления АвтоSPA: автомойка, мойка двигателя и шиномонтаж. Актуальный перечень и условия можно уточнить по телефону.</p></div></div>
   <div class="cards">
    <article class="card"><div class="service-icon">🚿</div><h3>Автомойка</h3><p>Уточните доступные виды мойки и актуальные условия по телефону.</p></article>
-   <article class="card engine-wash-card"><div class="service-icon">🔧</div><h3>Мойка двигателя</h3><p>Одна из важных услуг автомойки АвтоSPA. Актуальные условия и возможность выполнения услуги уточняйте по телефону.</p><a class="button button-secondary" style="margin-top:18px" href="#contacts">Уточнить условия</a></article>
+   <article class="card engine-wash-card"><div class="service-icon">🔧</div><h3>Мойка двигателя</h3><p>Одна из важных услуг автомойки АвтоSPA. Актуальные условия и возможность выполнения услуги уточняйте по телефону.</p><a class="button button-secondary" style="margin-top:18px" href="#engine-wash">Подробнее об услуге</a></article>
    <article class="card"><div class="service-icon">🛞</div><h3>Шиномонтаж</h3><p>Запишитесь на шиномонтаж по телефону и согласуйте удобное время.</p><a class="button button-primary" style="margin-top:18px" href="#tire-service">Записаться</a></article>
+  </div>
+ </div>
+</section>
+
+<section id="engine-wash" class="section engine-section">
+ <div class="container">
+  <div class="engine-box">
+   <div class="engine-copy">
+    <span class="eyebrow">Отдельная услуга</span>
+    <h2>Мойка двигателя</h2>
+    <p>Мойка двигателя — отдельное направление АвтоSPA, которое важно учитывать при выборе услуг. Возможность выполнения услуги и актуальные условия уточняйте по телефону.</p>
+    <a class="button button-primary" href="#contacts">Уточнить условия мойки двигателя</a>
+   </div>
+   <div class="engine-note"><span class="service-icon">🔧</span><strong>Мойка двигателя</strong><span>АвтоSPA • Москва</span></div>
   </div>
  </div>
 </section>
