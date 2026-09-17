@@ -1,4 +1,25 @@
 <?php get_header(); ?>
+<style>
+.tire-booking-banner{padding:28px 0 70px;background:linear-gradient(135deg,#fff8e9 0%,#effffc 48%,#eaf7ff 100%);position:relative;overflow:hidden}
+.tire-booking-card{min-height:300px;display:grid;grid-template-columns:180px 1fr auto;align-items:center;gap:28px;padding:34px 40px;border-radius:36px;background:linear-gradient(120deg,#fff0d9 0%,#ffffff 42%,#e1faf6 100%);border:2px solid #ffd6a8;box-shadow:0 24px 60px rgba(255,155,82,.18);position:relative;overflow:hidden;isolation:isolate}
+.tire-booking-card:before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;right:-150px;top:-180px;background:rgba(88,185,232,.15);z-index:-1}
+.tire-booking-card:after{content:"";position:absolute;left:-100px;bottom:-180px;width:360px;height:360px;border-radius:50%;background:rgba(243,154,203,.13);z-index:-1}
+.tire-bubbles span{position:absolute;border-radius:50%;border:2px solid rgba(24,183,173,.22);animation:bookingBubble 6s ease-in-out infinite}
+.tire-bubbles span:nth-child(1){width:18px;height:18px;left:24%;top:22%}.tire-bubbles span:nth-child(2){width:11px;height:11px;left:43%;bottom:14%;animation-delay:1s}.tire-bubbles span:nth-child(3){width:25px;height:25px;right:31%;bottom:17%;animation-delay:2s}
+.tire-booking-visual{height:190px;position:relative;display:flex;align-items:center;justify-content:center}
+.tire-ring{width:154px;height:154px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:92px;background:linear-gradient(145deg,#fff,#e5fbf8);border:10px solid #18b7ad;box-shadow:0 14px 35px rgba(24,183,173,.22);animation:tireFloat 4s ease-in-out infinite;transform-origin:center}
+.tire-spark{position:absolute;font-size:28px;color:#ff9b52;animation:bookingSpark 2.6s ease-in-out infinite}.spark-one{right:3px;top:10px}.spark-two{left:8px;bottom:15px;color:#f39acb;animation-delay:1.1s}
+.booking-kicker{display:inline-flex;padding:8px 13px;border-radius:999px;background:#dff9f4;color:#168c86;font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.08em}
+.tire-booking-content{position:relative;z-index:2}.tire-booking-content h2{font-size:clamp(30px,4vw,48px);line-height:1.03;letter-spacing:-.045em;margin:13px 0 10px;color:#244b5a}.tire-booking-content p{margin:0;color:#5f8790;font-size:17px;max-width:600px}.booking-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:22px}.booking-button{background:#ff9b52!important;color:#fff!important;font-size:16px;padding:16px 23px;border-radius:17px;box-shadow:0 12px 28px rgba(255,155,82,.25);animation:bookingPulse 2.5s ease-in-out infinite}.booking-button:hover{background:#f08a39!important;transform:translateY(-3px) scale(1.01)}.booking-phone{font-size:18px;font-weight:900;color:#168c86;white-space:nowrap}
+.booking-badge{min-width:145px;padding:18px 16px;border-radius:24px;background:#fff;border:1px solid #bfe8e2;box-shadow:0 12px 30px rgba(24,183,173,.12);display:flex;flex-direction:column;align-items:center;text-align:center;transform:rotate(2deg);position:relative;z-index:2}.booking-badge strong{font-size:38px;line-height:1}.booking-badge span{font-weight:900;color:#168c86;margin-top:7px}.booking-badge small{color:#5f8790;margin-top:2px}
+.tire-service-card{border-color:#ffd5b1!important;box-shadow:0 14px 34px rgba(255,155,82,.12)!important}.tire-service-card .service-icon{background:#fff0df}
+@keyframes tireFloat{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-9px) rotate(8deg)}}
+@keyframes bookingPulse{0%,100%{box-shadow:0 12px 28px rgba(255,155,82,.22)}50%{box-shadow:0 16px 38px rgba(255,155,82,.38)}}
+@keyframes bookingBubble{0%,100%{transform:translateY(0) scale(1);opacity:.65}50%{transform:translateY(-18px) scale(1.15);opacity:1}}
+@keyframes bookingSpark{0%,100%{transform:scale(.85) rotate(0);opacity:.65}50%{transform:scale(1.2) rotate(15deg);opacity:1}}
+@media(max-width:1000px){.tire-booking-card{grid-template-columns:150px 1fr}.booking-badge{position:absolute;right:25px;top:22px}.tire-booking-content{padding-right:155px}}
+@media(max-width:700px){.tire-booking-banner{padding-top:12px;padding-bottom:50px}.tire-booking-card{grid-template-columns:1fr;gap:15px;padding:25px 20px;text-align:center}.tire-booking-visual{height:150px}.tire-ring{width:122px;height:122px;font-size:70px;border-width:8px}.tire-booking-content{padding-right:0}.tire-booking-content h2{font-size:34px}.tire-booking-content p{font-size:16px}.booking-actions{justify-content:center}.booking-button{width:100%}.booking-phone{width:100%;font-size:17px}.booking-badge{position:static;justify-self:center;transform:none;min-width:170px}.spark-one{right:24%}.spark-two{left:24%}}
+</style>
 <main>
 <section class="hero">
  <div class="container hero-grid">
