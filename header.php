@@ -1,4 +1,4 @@
-<?php if (!defined('ABSPATH')) exit; ?>
+<?php if (!defined('ABSPATH')) { exit; } ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -16,11 +16,11 @@
     </nav>
     <div class="header-actions">
       <?php $wa=get_theme_mod('avtospa_whatsapp',''); $tg=get_theme_mod('avtospa_telegram',''); ?>
-      <?php if($wa): ?><a class="icon-link" href="<?php echo esc_url($wa); ?>" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a><?php endif; ?>
-      <?php if($tg): ?><a class="icon-link" href="<?php echo esc_url($tg); ?>" target="_blank" rel="noopener" aria-label="Telegram">TG</a><?php endif; ?>
+      <?php if($wa): ?><a class="icon-link" href="<?php echo esc_url($wa); ?>" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">WA</a><?php endif; ?>
+      <?php if($tg): ?><a class="icon-link" href="<?php echo esc_url($tg); ?>" target="_blank" rel="noopener noreferrer" aria-label="Telegram">TG</a><?php endif; ?>
       <a class="call-link" href="tel:<?php echo esc_attr(avtospa_phone_href()); ?>">Позвонить</a>
-      <button class="mobile-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">☰</button>
+      <button class="mobile-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">☰<span class="screen-reader-text">Открыть меню</span></button>
     </div>
   </div>
-  <div id="mobile-menu" hidden class="container"></div>
+  <div id="mobile-menu" hidden class="container mobile-panel"></div>
 </header>
