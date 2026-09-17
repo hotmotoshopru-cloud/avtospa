@@ -1,5 +1,5 @@
 <?php
-/** АвтоSPA theme functions. */
+/** АвтоСпа theme functions. */
 if (!defined('ABSPATH')) { exit; }
 
 function avtospa_setup() {
@@ -18,7 +18,7 @@ function avtospa_assets() {
 add_action('wp_enqueue_scripts','avtospa_assets');
 
 function avtospa_customize_register($wp_customize) {
-    $wp_customize->add_section('avtospa_contacts', array('title'=>'АвтоSPA — контакты','priority'=>30));
+    $wp_customize->add_section('avtospa_contacts', array('title'=>'АвтоСпа — контакты','priority'=>30));
     $wp_customize->add_setting('avtospa_phone', array('default'=>'+7 916 299-98-59','sanitize_callback'=>'sanitize_text_field'));
     $wp_customize->add_control('avtospa_phone', array('label'=>'Телефон','section'=>'avtospa_contacts','type'=>'text'));
     $wp_customize->add_setting('avtospa_address', array('default'=>'Россия, Москва, Полярный проезд, 18, стр. 2','sanitize_callback'=>'sanitize_text_field'));
@@ -45,7 +45,7 @@ function avtospa_has_seo_plugin() {
 function avtospa_head_seo() {
     if (avtospa_has_seo_plugin()) { return; }
     if (is_front_page() || is_home()) {
-        echo '<meta name="description" content="' . esc_attr('АвтоSPA в Москве — автомойка, мойка двигателя и шиномонтаж. Полярный проезд, 18, стр. 2. Запись и контакты на сайте.') . '">\n';
+        echo '<meta name="description" content="' . esc_attr('АвтоСпа в Москве — автомойка, мойка двигателя и шиномонтаж. Полярный проезд, 18, стр. 2. Запись и контакты на сайте.') . '">\n';
     }
 }
 add_action('wp_head','avtospa_head_seo',2);
@@ -57,13 +57,13 @@ function avtospa_schema() {
     $data = array(
         '@context'=>'https://schema.org',
         '@type'=>'LocalBusiness',
-        'name'=>'АвтоSPA',
+        'name'=>'АвтоСпа',
         'url'=>home_url('/'),
         'telephone'=>$phone,
         'address'=>array('@type'=>'PostalAddress','streetAddress'=>$address,'addressLocality'=>'Москва','addressCountry'=>'RU'),
         'hasOfferCatalog'=>array(
             '@type'=>'OfferCatalog',
-            'name'=>'Услуги АвтоSPA',
+            'name'=>'Услуги АвтоСпа',
             'itemListElement'=>array(
                 array('@type'=>'Offer','itemOffered'=>array('@type'=>'Service','name'=>'Автомойка')),
                 array('@type'=>'Offer','itemOffered'=>array('@type'=>'Service','name'=>'Мойка двигателя')),
