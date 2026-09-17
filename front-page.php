@@ -26,6 +26,19 @@
  <div class="container"><div class="tire-box"><div><span class="eyebrow">Шиномонтаж</span><h2>Запись на шиномонтаж</h2><p>Позвоните в АвтоSPA, чтобы уточнить актуальные условия и согласовать удобное время.</p></div><a class="button tire-cta" href="tel:<?php echo esc_attr(avtospa_phone_href()); ?>">Записаться на шиномонтаж</a></div></div>
 </section>
 
+<section class="section autotech-banner" id="autotech">
+ <div class="container">
+  <div class="autotech-banner-inner">
+   <div class="autotech-copy">
+    <span class="eyebrow">Отдельное направление</span>
+    <h2>Автосервис Автотех</h2>
+    <p>Ремонт, диагностика и техническое обслуживание автомобилей. Перейдите на отдельный сайт автосервиса, чтобы посмотреть услуги и записаться на ремонт.</p>
+   </div>
+   <a class="button button-primary" href="https://xn----7sbbgabsz5cgqkebg.su/" target="_blank" rel="noopener noreferrer">Перейти в автосервис</a>
+  </div>
+ </div>
+</section>
+
 <section class="section alt">
  <div class="container"><div class="section-head"><div><h2>АвтоSPA в Москве</h2><p class="section-intro">Контактная информация и основные действия собраны в одном месте.</p></div></div>
   <div class="benefits"><div class="benefit"><strong>Телефон</strong><span>Позвоните для записи и уточнения условий.</span></div><div class="benefit"><strong>Адрес</strong><span>Полярный проезд, 18, стр. 2, Москва.</span></div><div class="benefit"><strong>Шиномонтаж</strong><span>Отдельный блок для быстрой записи.</span></div><div class="benefit"><strong>Автомойка</strong><span>Основное направление АвтоSPA.</span></div></div>
