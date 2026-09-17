@@ -1,0 +1,1 @@
+<?php get_header(); ?><main class="section"><div class="container"><h1>Страница не найдена</h1><p>Проверьте адрес страницы или вернитесь на главную.</p><a class="button button-primary" href="<?php echo esc_url(home_url('/')); ?>">На главную</a></div></main><?php get_footer(); ?>
