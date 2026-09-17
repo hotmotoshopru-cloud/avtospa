@@ -6,9 +6,25 @@
    <span class="eyebrow">АвтоСпа • Москва</span>
    <h1>Автомойка и шиномонтаж в Москве</h1>
    <p>АвтоСпа — автомойка и шиномонтаж по адресу: Москва, Полярный проезд, 18, стр. 2. Актуальные услуги и условия уточняйте по телефону.</p>
-   <div class="hero-buttons"><a class="button button-primary" href="#tire-service">Записаться на шиномонтаж</a><a class="button button-secondary" href="#services">Услуги</a></div>
+   <div class="hero-buttons"><a class="button button-primary" href="#tire-booking">🛞 Записаться на шиномонтаж</a><a class="button button-secondary" href="#services">Услуги</a></div>
   </div>
   <div class="hero-card"><div class="hero-card-content"><strong>АвтоСпа</strong><small>Полярный проезд, 18, стр. 2 • Москва</small></div></div>
+ </div>
+</section>
+
+<section class="tire-booking-banner" id="tire-booking">
+ <div class="container">
+  <div class="tire-booking-card">
+   <div class="tire-bubbles"><span></span><span></span><span></span></div>
+   <div class="tire-booking-visual" aria-hidden="true"><div class="tire-ring">🛞</div><div class="tire-spark spark-one">✦</div><div class="tire-spark spark-two">✦</div></div>
+   <div class="tire-booking-content">
+    <span class="booking-kicker">АвтоСпа • Шиномонтаж</span>
+    <h2>Запишитесь на шиномонтаж</h2>
+    <p>Позвоните в АвтоСпа и согласуйте удобное время записи.</p>
+    <div class="booking-actions"><a class="button booking-button" href="tel:<?php echo esc_attr(avtospa_phone_href()); ?>">📞 Записаться по телефону</a><a class="booking-phone" href="tel:<?php echo esc_attr(avtospa_phone_href()); ?>">+7 916 299-98-59</a></div>
+   </div>
+   <div class="booking-badge"><strong>🛞</strong><span>Быстрая запись</span><small>по телефону</small></div>
+  </div>
  </div>
 </section>
 
@@ -18,7 +34,7 @@
   <div class="cards">
    <article class="card"><div class="service-icon">🚿</div><h3>Автомойка</h3><p>Уточните доступные виды мойки и актуальные условия по телефону.</p></article>
    <article class="card engine-wash-card"><div class="service-icon">🔧</div><h3>Мойка двигателя</h3><p>Одна из важных услуг автомойки АвтоСпа. Актуальные условия и возможность выполнения услуги уточняйте по телефону.</p><a class="button button-secondary" style="margin-top:18px" href="#engine-wash">Подробнее об услуге</a></article>
-   <article class="card"><div class="service-icon">🛞</div><h3>Шиномонтаж</h3><p>Запишитесь на шиномонтаж по телефону и согласуйте удобное время.</p><a class="button button-primary" style="margin-top:18px" href="#tire-service">Записаться</a></article>
+   <article class="card tire-service-card"><div class="service-icon">🛞</div><h3>Шиномонтаж</h3><p>Запишитесь на шиномонтаж по телефону и согласуйте удобное время.</p><a class="button button-primary" style="margin-top:18px" href="#tire-booking">Записаться</a></article>
   </div>
  </div>
 </section>
