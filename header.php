@@ -14,9 +14,9 @@
       <span class="brand-mark" aria-hidden="true"><span>✦</span></span>
       <span class="brand-name">АвтоСпа</span>
     </a>
-    <a class="header-location" href="<?php echo esc_url(home_url('/#contacts')); ?>" aria-label="Адрес АвтоСпа">
+    <a class="header-location" href="<?php echo esc_url(home_url('/#contacts')); ?>" aria-label="Адрес АвтоСпа: Москва, Полярный проезд, 18, строение 2">
       <span class="location-dot" aria-hidden="true">●</span>
-      <span><strong>Москва</strong><br><small>Полярный проезд, 18</small></span>
+      <span><strong>Москва</strong><br><small>Полярный проезд, 18, стр. 2</small></span>
     </a>
     <nav class="main-nav" aria-label="Основное меню">
       <?php wp_nav_menu(array('theme_location'=>'primary','container'=>false,'fallback_cb'=>'avtospa_fallback_menu')); ?>
