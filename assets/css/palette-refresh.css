@@ -522,3 +522,35 @@
   .faq summary{font-size:15px !important}
   .site-footer{padding-top:32px !important}
 }
+
+
+/* Финальная полировка ритма страницы и визуальной иерархии */
+.hero .eyebrow{box-shadow:0 6px 15px rgba(52,139,190,.06)}
+.hero-buttons .button{letter-spacing:.005em}
+.quick-actions .quick-action{backdrop-filter:blur(8px)}
+.tire-booking-card{isolation:isolate}
+.tire-booking-content{position:relative;z-index:2}
+.booking-badge{position:relative;z-index:3}
+#services .card{min-height:275px;display:flex}
+#services .service-card-link{display:flex;height:100%;flex-direction:column}
+#services .service-card-more{margin-top:auto;align-self:flex-start}
+.engine-copy .button,.tire-cta,.autotech-banner-inner>.button,.contact-map-button{font-weight:900}
+.engine-note{overflow:hidden}
+.engine-note:after{
+ content:"✦";position:absolute;right:20px;top:15px;font-size:42px;color:#42b8e8;opacity:.22;
+}
+.tire-box{isolation:isolate}
+.tire-box>*{position:relative;z-index:2}
+.reviews-location-section .section-head .eyebrow{margin-bottom:4px}
+.map-card-head .map-link{flex:none}
+.site-footer{position:relative;overflow:hidden}
+.site-footer:after{
+ content:"";position:absolute;width:240px;height:240px;border-radius:50%;
+ right:-110px;bottom:-150px;background:#eaf7ff;pointer-events:none;
+}
+.site-footer .container{position:relative;z-index:1}
+@media(max-width:600px){
+ #services .card{min-height:0;display:block}
+ #services .service-card-link{display:flex}
+ .engine-note:after{font-size:34px}
+}
