@@ -1,4 +1,5 @@
 <?php if (!defined('ABSPATH')) { exit; } ?>
+<?php if (file_exists(get_template_directory() . '/inc/seo.php')) { require_once get_template_directory() . '/inc/seo.php'; } ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
