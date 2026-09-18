@@ -72,3 +72,46 @@
   .service-page-hero{padding:22px !important;border-radius:24px !important}
   .service-entry-content{padding:22px !important;border-radius:24px !important}
 }
+
+
+/* Внутренние страницы — единый стиль с главной */
+.service-page-hero .page-actions{border-top:0;padding-top:0;margin-top:24px}
+.service-page-hero .button-primary{
+  background:linear-gradient(135deg,#ff8a2b,#ff625e) !important;
+  border:0 !important;box-shadow:0 12px 24px rgba(255,112,72,.20);
+}
+.service-page-hero .button-secondary{border:2px solid #4b9ef0 !important;color:#1768b4 !important}
+.service-page-visual{
+  min-height:320px !important;
+  background:linear-gradient(135deg,#eaf7ff,#f7fcff 52%,#fff0e8) !important;
+}
+.service-page-icon{filter:drop-shadow(0 12px 18px rgba(255,122,53,.12))}
+.service-entry-content{
+  position:relative;overflow:hidden;
+}
+.service-entry-content:before{
+  content:"";position:absolute;left:0;top:0;width:5px;height:100%;
+  background:linear-gradient(180deg,#42b8e8,#229fd0,#ff725f);
+}
+.service-entry-content>*{position:relative;z-index:1}
+.service-faq details{
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease !important;
+}
+.service-faq details:hover{
+  transform:translateY(-2px);border-color:#b8ddef !important;
+  box-shadow:0 12px 25px rgba(52,139,190,.10) !important;
+}
+.service-related-card,.service-bottom-card{
+  transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease !important;
+}
+.service-related-card:nth-child(1)>span{background:#eaf7ff !important}
+.service-related-card:nth-child(2)>span{background:#fff0e8 !important}
+.service-related-card:nth-child(3)>span{background:#fff5d9 !important}
+.service-bottom-tire{border-top:3px solid #ffc857 !important}
+.service-bottom-engine{border-top:3px solid #ff725f !important}
+.service-bottom-contact{border-top:3px solid #42b8e8 !important}
+@media(max-width:600px){
+ .service-page-hero .page-actions{margin-top:20px}
+ .service-page-hero .button{min-height:50px}
+ .service-page-visual{min-height:220px !important}
+}
