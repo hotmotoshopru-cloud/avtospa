@@ -50,7 +50,7 @@ foreach (array('Автомойка','Мойка двигателя','Шином�
             <nav class="breadcrumbs" aria-label="Хлебные крошки">
                 <a href="<?php echo esc_url(home_url('/')); ?>">АвтоСпа</a>
                 <span aria-hidden="true">›</span>
-                <span><?php echo esc_html($service_title); ?></span>
+                <span aria-current="page"><?php echo esc_html($service_title); ?></span>
             </nav>
 
             <div class="service-page-hero">
