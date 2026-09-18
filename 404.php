@@ -9,6 +9,7 @@
         <a class="button button-primary" href="<?php echo esc_url(home_url('/')); ?>">На главную</a>
         <a class="button button-secondary" href="<?php echo esc_url(home_url('/#services')); ?>">Услуги АвтоСпа</a>
         <a class="button button-secondary" href="<?php echo esc_url(home_url('/#contacts')); ?>">Контакты</a>
+        <a class="button button-secondary" href="tel:<?php echo esc_attr(avtospa_phone_href()); ?>">Позвонить: <?php echo esc_html(get_theme_mod('avtospa_phone','+7 916 299-98-59')); ?></a>
       </div>
       <div class="service-page-bottom" style="text-align:left;">
         <a class="service-bottom-card service-bottom-tire" href="<?php echo esc_url(avtospa_service_page_url('Шиномонтаж','/#tire-booking')); ?>">
