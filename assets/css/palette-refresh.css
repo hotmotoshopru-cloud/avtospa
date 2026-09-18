@@ -298,3 +298,23 @@
   .yandex-map{height:280px !important}
   .site-footer{padding-bottom:82px !important}
 }
+
+
+/* Финальная полировка: убрать старые зелёные акценты из нижних слоёв */
+#services .section-head:after{
+  content:"АВТОСПА • ОСНОВНЫЕ УСЛУГИ" !important;
+  background:#eef8ff !important;border-color:#d1eafa !important;color:#1683c0 !important;
+}
+#services .tire-service-card{border-color:#ffd5bf !important}
+#services .tire-service-card .service-icon{background:#fff5db !important;border-color:#ffe0a2 !important}
+#services .tire-service-card:hover{border-color:#ffc08f !important}
+#services .tire-service-card .service-card-more{background:#fff7ed !important;border-color:#ffd5bf !important;color:#d96d2e !important}
+#services .engine-wash-card{border-color:#d7eaf7 !important}
+#services .engine-wash-card .service-card-more{background:#eef8ff !important;color:#1683b5 !important}
+#services .service-card-link{display:block;height:100%}
+#services .card h3{letter-spacing:-.025em}
+.autotech-banner-inner .eyebrow{background:#fff !important;color:#d96d2e !important;border-color:#ffd9b8 !important}
+.booking-kicker{border:1px solid #d1eafa !important}
+.site-footer a{color:#1683b5 !important}
+.site-footer a:hover{color:#ff725f !important}
+.avtospa-floating-book{border:2px solid rgba(255,255,255,.92) !important}
