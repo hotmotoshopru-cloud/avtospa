@@ -411,3 +411,53 @@
  .footer-mini-links a{font-size:10px}
  .footer-phone{width:100%;justify-content:center}
 }
+
+
+/* Отзывы, карта и FAQ — лёгкая карточная подача референса */
+.reviews-location-section .section-head{margin-bottom:24px}
+.reviews-location-section .section-head h2{font-size:clamp(31px,4vw,45px)}
+.yandex-review-card,.map-card{
+  transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease !important;
+}
+.yandex-review-card:hover,.map-card:hover{
+  transform:translateY(-5px) !important;
+  box-shadow:0 22px 44px rgba(52,139,190,.13) !important;
+  border-color:#b9ddf0 !important;
+}
+.review-card-head .button,.contact-map-button{
+  border-radius:999px !important;
+}
+.map-card-head{align-items:center}
+.map-link{
+  display:inline-flex;align-items:center;padding:9px 12px;border-radius:999px;
+  text-decoration:none !important;transition:transform .2s ease,box-shadow .2s ease;
+}
+.map-link:hover{transform:translateY(-2px);box-shadow:0 7px 16px rgba(52,139,190,.10)}
+.yandex-map{border:1px solid #d9ebf5 !important;box-shadow:inset 0 0 0 1px rgba(255,255,255,.5)}
+.faq details{
+  position:relative;overflow:hidden;
+  transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease !important;
+}
+.faq details:hover{transform:translateY(-2px);box-shadow:0 13px 28px rgba(52,139,190,.10) !important}
+.faq details[open]{transform:none}
+.faq summary{padding-right:38px;position:relative}
+.faq summary:before{
+  content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);
+  width:27px;height:27px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  background:#eef8ff;color:#1683b5;font-size:19px;font-weight:400;
+}
+.faq details[open] summary:before{content:"−";background:#fff0e8;color:#ff725f}
+.faq details p{margin:12px 0 0;line-height:1.6}
+
+/* Контакты — один чистый CTA-блок */
+#contacts .contact-card{
+  display:grid;grid-template-columns:1fr 1fr;column-gap:34px;align-items:start;
+}
+#contacts .contact-card h2,#contacts .contact-card>p{grid-column:1/-1}
+#contacts .contact-row{min-height:64px}
+#contacts .contact-map-button{grid-column:1/-1;justify-self:start}
+@media(max-width:700px){
+ #contacts .contact-card{display:block}
+ #contacts .contact-map-button{width:100%}
+ .review-card-head,.map-card-head{gap:10px}
+}
