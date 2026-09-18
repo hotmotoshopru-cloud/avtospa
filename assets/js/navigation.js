@@ -4,7 +4,7 @@ if(b&&m){
  const close=()=>{b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Открыть меню');m.hidden=true;document.body.classList.remove('mobile-menu-open');};
  const openMenu=()=>{
   b.setAttribute('aria-expanded','true');b.setAttribute('aria-label','Закрыть меню');m.hidden=false;document.body.classList.add('mobile-menu-open');
-  const wa=document.body.dataset.whatsapp||'';const tg=document.body.dataset.telegram||'';const home=document.body.dataset.homeUrl||'/';const phone=document.body.dataset.phone||'';
+  const wa=document.body.dataset.whatsapp||'';const tg=document.body.dataset.telegram||'';const home=document.body.dataset.homeUrl||'/';const phone=document.body.dataset.phone||'';const phoneDisplay=document.body.dataset.phoneDisplay||phone;
   let social='';
   if(wa){social+='<a class="mobile-social mobile-whatsapp" href="'+wa+'" target="_blank" rel="noopener noreferrer"><span>◉</span><span>WhatsApp</span></a>';}
   if(tg){social+='<a class="mobile-social mobile-telegram" href="'+tg+'" target="_blank" rel="noopener noreferrer"><span>➤</span><span>Telegram</span></a>';}
