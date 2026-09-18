@@ -48,7 +48,7 @@ foreach (array('Автомойка','Мойка двигателя','Шином�
     }
 }
 ?>
-<main class="section service-page">
+<main id="content" class="section service-page">
     <div class="container">
         <article class="content-page service-page-card">
             <nav class="breadcrumbs" aria-label="Хлебные крошки">
