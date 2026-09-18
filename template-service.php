@@ -79,6 +79,10 @@ foreach (array('Автомойка','Мойка двигателя','Шином�
             </div>
 
             <div class="entry-content service-entry-content">
+                <div class="service-seo-intro">
+                    <span class="eyebrow">АвтоСпа • Москва</span>
+                    <p><strong><?php echo esc_html($seo_terms[$service_title] ?? $service_title); ?></strong></p>
+                </div>
                 <?php if ($service_content) : ?>
                     <?php echo wp_kses_post($service_content); ?>
                 <?php endif; ?>
