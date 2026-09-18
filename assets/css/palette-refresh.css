@@ -979,3 +979,7 @@ html{scroll-padding-top:82px}
 img{max-width:100%;height:auto;}
 .hero-auto-image,.tire-service-image{content-visibility:auto;}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;}}
+
+/* Финальный слой: унификация фокуса и клавиатурной навигации */
+:where(a,button,summary):focus-visible{outline:3px solid #42b8e8;outline-offset:3px;border-radius:10px;}
+:where(.button,.call-link,.social-link,.nav-external):focus-visible{box-shadow:0 0 0 5px rgba(66,184,232,.18);}
