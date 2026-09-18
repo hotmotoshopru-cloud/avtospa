@@ -844,3 +844,64 @@ html{scroll-padding-top:82px}
  .reviews-location .card,.location-contacts .card,#contacts .card{border-radius:18px !important}
  .reviews-location .map,.location-contacts .map{border-radius:18px !important}
 }
+
+
+/* FAQ + финальный CTA */
+.faq-section,
+#faq{
+ position:relative !important;
+}
+#faq .faq-item,
+.faq-section .faq-item{
+ border:1px solid #dceff8 !important;
+ border-radius:18px !important;
+ background:#fff !important;
+ box-shadow:0 10px 26px rgba(52,139,190,.06) !important;
+ overflow:hidden !important;
+ transition:border-color .2s ease,box-shadow .2s ease !important;
+}
+#faq .faq-item:hover,
+.faq-section .faq-item:hover{
+ border-color:#bfe4f5 !important;
+ box-shadow:0 15px 32px rgba(52,139,190,.10) !important;
+}
+#faq summary,
+.faq-section summary{
+ color:#174b73 !important;
+ font-weight:800 !important;
+ cursor:pointer !important;
+}
+#faq summary::marker,
+.faq-section summary::marker{color:#229fd0 !important}
+.avtospa-final-cta{
+ position:relative !important;overflow:hidden !important;
+ margin-top:34px !important;padding:38px !important;
+ border-radius:28px !important;
+ border:1px solid #d8edf8 !important;
+ background:linear-gradient(115deg,#eaf9ff 0%,#fff 52%,#fff0e8 100%) !important;
+ box-shadow:0 20px 48px rgba(52,139,190,.11) !important;
+}
+.avtospa-final-cta:before{
+ content:"";position:absolute;right:-90px;top:-110px;width:260px;height:260px;
+ border-radius:50%;background:rgba(66,184,232,.13);pointer-events:none;
+}
+.avtospa-final-cta:after{
+ content:"";position:absolute;left:-70px;bottom:-120px;width:210px;height:210px;
+ border-radius:50%;background:rgba(255,114,95,.10);pointer-events:none;
+}
+.avtospa-final-cta>*{position:relative;z-index:2}
+.avtospa-final-cta h2{
+ color:#174b73 !important;font-size:clamp(27px,3vw,40px) !important;
+ letter-spacing:-.035em !important;margin:0 0 10px !important;
+}
+.avtospa-final-cta p{color:#5d7d96 !important;line-height:1.65 !important}
+.avtospa-final-cta .button{
+ border-radius:999px !important;
+ background:linear-gradient(135deg,#ff725f,#ff8a57) !important;
+ color:#fff !important;border:0 !important;
+ box-shadow:0 13px 28px rgba(255,114,95,.23) !important;
+}
+.avtospa-final-cta .button:hover{transform:translateY(-2px)}
+@media(max-width:700px){
+ .avtospa-final-cta{padding:27px 22px !important;border-radius:22px !important}
+}
