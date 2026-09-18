@@ -1085,3 +1085,16 @@ body{overflow-x:clip;}
 @media(max-width:700px){
  .site-footer .footer-inner> .footer-note{align-self:center;margin-top:18px;}
 }
+
+/* Финальный мобильный header */
+@media(max-width:900px){
+ .site-header .header-inner{gap:8px !important;}
+ .site-header .header-actions{gap:7px !important;}
+ .site-header .mobile-toggle{flex:0 0 44px !important;width:44px !important;height:44px !important;}
+ .site-header .call-link{flex:0 0 44px !important;width:44px !important;height:44px !important;min-height:44px !important;}
+}
+@media(max-width:600px){
+ .site-header .header-inner{min-height:62px !important;}
+ .site-header .brand{font-size:21px !important;}
+ .site-header .brand-mark{width:31px !important;height:31px !important;}
+}
