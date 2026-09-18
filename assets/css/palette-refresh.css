@@ -1117,3 +1117,8 @@ body{overflow-x:clip;}
  .hero-visual-brand span{font-size:11px !important;}
  .hero-mini-cta{right:14px !important;bottom:14px !important;padding:9px 11px !important;}
 }
+
+/* Финальная доступность изображений */
+.hero-auto-image,.tire-service-image{display:block !important;}
+.hero-auto-image{aspect-ratio:900/620;object-fit:contain;}
+.tire-service-image{aspect-ratio:900/620;object-fit:contain;}
