@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main class="section"><meta name="robots" content="noindex, follow">
+<main class="section">
   <div class="container">
     <article class="content-page" style="max-width:900px;margin:0 auto;text-align:center;">
       <span class="eyebrow">АвтоСпа • Москва</span>
