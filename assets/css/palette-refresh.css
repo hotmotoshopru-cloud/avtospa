@@ -974,3 +974,8 @@ html{scroll-padding-top:82px}
 .internal-link-card small{font-size:12px;line-height:1.45;color:#5d7d96}
 @media(max-width:900px){.internal-links-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.internal-links-grid{grid-template-columns:1fr}.internal-link-card{padding:17px}}
+
+/* Финальная производительность и доступность */
+img{max-width:100%;height:auto;}
+.hero-auto-image,.tire-service-image{content-visibility:auto;}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;}}
