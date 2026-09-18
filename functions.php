@@ -31,5 +31,5 @@ function avtospa_schema(){if(avtospa_has_seo_plugin()){return;}$phone=get_theme_
 add_action('wp_head','avtospa_schema',20);
 function avtospa_service_template($template){if(!is_page()){return $template;}$title=trim(wp_strip_all_tags(get_the_title()));$service_titles=array('Автомойка','Мойка двигателя','Шиномонтаж');if(in_array($title,$service_titles,true)){ $candidate=get_template_directory().'/template-service.php'; if(file_exists($candidate)){return $candidate;}}return $template;}
 add_filter('template_include','avtospa_service_template',99);
-function avtospa_robots_txt($output,$public){if($public){$output="User-agent: *\nDisallow: /wp-admin/\nAllow: /wp-admin/admin-ajax.php\nSitemap: ".esc_url(home_url('/wp-sitemap.xml'))."\n";}return $output;}
+function avtospa_robots_txt($output,$public){if($public){$sitemap=home_url('/wp-sitemap.xml');$output="User-agent: *\nDisallow: /wp-admin/\nAllow: /wp-admin/admin-ajax.php\nSitemap: ".$sitemap."\n";}return $output;}
 add_filter('robots_txt','avtospa_robots_txt',10,2);
