@@ -1017,3 +1017,16 @@ body{overflow-x:clip;}
 /* Финальная корректировка плавающей записи */
 .avtospa-floating-book{right:22px !important;bottom:20px !important;min-height:52px !important;padding:0 22px !important;border-radius:999px !important;font-size:15px !important;z-index:90 !important;}
 @media(max-width:700px){.avtospa-floating-book{right:12px !important;bottom:12px !important;min-height:48px !important;padding:0 16px !important;font-size:14px !important;max-width:calc(100vw - 24px) !important;}}
+
+/* Компактный блок Автотех: вторичное направление без лишней высоты */
+.autotech-banner{padding-top:30px !important;padding-bottom:30px !important;}
+.autotech-banner-inner{gap:22px !important;padding:24px 28px !important;}
+.autotech-copy .eyebrow{margin-bottom:6px !important;}
+.autotech-copy h2{margin:0 0 8px !important;font-size:clamp(24px,3vw,34px) !important;}
+.autotech-copy p{margin:0 !important;max-width:720px;line-height:1.6;}
+.autotech-banner .button{min-height:48px !important;white-space:nowrap;}
+@media(max-width:700px){
+ .autotech-banner{padding-top:24px !important;padding-bottom:24px !important;}
+ .autotech-banner-inner{padding:20px !important;}
+ .autotech-banner .button{width:100%;}
+}
