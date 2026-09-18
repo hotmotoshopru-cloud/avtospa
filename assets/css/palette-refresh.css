@@ -590,3 +590,34 @@ html{scroll-padding-top:82px}
 @media(prefers-reduced-motion:reduce){
  .hero-service-tags span{transition:none}
 }
+
+
+/* Правая часть hero — более выразительная композиция по референсу */
+.hero-visual{min-height:425px !important;box-shadow:0 18px 44px rgba(52,139,190,.10) !important}
+.hero-visual:before{
+ width:360px;height:360px;right:-125px;top:-125px;
+ background:rgba(66,184,232,.13) !important;
+}
+.hero-visual:after{
+ width:250px;height:250px;left:-105px;bottom:-115px;
+ background:rgba(255,114,95,.09) !important;
+}
+.hero-auto-image{object-fit:cover !important;object-position:center !important}
+.hero-visual-brand{
+ border:1px solid rgba(210,232,246,.9);
+ box-shadow:0 10px 24px rgba(52,139,190,.09);
+}
+.hero-mini-cta{
+ box-shadow:0 12px 25px rgba(255,112,72,.22) !important;
+}
+.hero-service-tags span{
+ box-shadow:0 9px 20px rgba(52,139,190,.08) !important;
+}
+@media(max-width:900px){
+ .hero-visual{min-height:350px !important}
+}
+@media(max-width:600px){
+ .hero-visual{min-height:285px !important}
+ .hero-visual-brand{max-width:58%}
+ .hero-service-tags{max-width:58%}
+}
