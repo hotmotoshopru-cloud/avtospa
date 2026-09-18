@@ -376,3 +376,38 @@
  .tire-booking-content h2{font-size:31px !important}
  .booking-phone{width:100%;text-align:center}
 }
+
+
+/* Финальная настройка шапки и футера под единый макет */
+.site-header{box-shadow:0 5px 22px rgba(52,139,190,.06) !important}
+.header-inner{max-width:1180px}
+.brand-name{color:#1769c2 !important}
+.main-nav .current-menu-item>a,.main-nav .current_page_item>a{
+  position:relative;background:transparent !important;
+}
+.main-nav .current-menu-item>a:after,.main-nav .current_page_item>a:after{
+  content:"";position:absolute;left:10px;right:10px;bottom:1px;height:3px;border-radius:99px;background:#2b8fd5;
+}
+.header-actions .call-link{min-width:142px}
+.header-actions .call-link strong{font-size:11px}
+.footer-mini-links{display:flex;flex-wrap:wrap;gap:7px;margin-top:15px}
+.footer-mini-links a{
+  display:inline-flex;align-items:center;padding:8px 11px;border-radius:999px;
+  text-decoration:none !important;font-size:11px;font-weight:900;
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.footer-mini-links a:hover{transform:translateY(-2px);box-shadow:0 7px 15px rgba(52,139,190,.10)}
+.footer-phone{
+ display:inline-flex;align-items:center;margin-top:13px;padding:10px 14px;border:1px solid #d4eaf7;
+ border-radius:999px;text-decoration:none !important;font-size:13px;font-weight:900;
+}
+.footer-address{margin-top:8px;color:#5d7d96;font-size:13px}
+.footer-inner>div:last-child{text-align:right}
+@media(max-width:900px){
+ .header-actions .call-link{min-width:42px}
+ .footer-inner>div:last-child{text-align:left;margin-top:18px}
+}
+@media(max-width:600px){
+ .footer-mini-links a{font-size:10px}
+ .footer-phone{width:100%;justify-content:center}
+}
