@@ -8,6 +8,7 @@
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> data-whatsapp="<?php echo esc_attr(get_theme_mod('avtospa_whatsapp','')); ?>" data-telegram="<?php echo esc_attr(get_theme_mod('avtospa_telegram','')); ?>" data-home-url="<?php echo esc_url(home_url('/')); ?>" data-phone="<?php echo esc_attr(avtospa_phone_href()); ?>">
+<a class="skip-link" href="#content">Перейти к содержимому</a>
 <?php wp_body_open(); ?>
 <header class="site-header">
   <div class="container header-inner">
