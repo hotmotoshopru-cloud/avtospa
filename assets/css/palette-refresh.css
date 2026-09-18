@@ -1066,3 +1066,12 @@ body{overflow-x:clip;}
 .internal-link-card strong{font-size:15px !important;}
 .internal-link-card small{font-size:12px !important;}
 @media(max-width:700px){.internal-links-section{padding-top:34px !important;padding-bottom:34px !important;}.internal-link-card{padding:15px 16px !important;}}
+
+/* Финиш: печать и системные настройки интерфейса */
+@media print{
+ .site-header,.mobile-booking-bar,.avtospa-floating-book,.avtospa-progress,.skip-link,.header-actions,.main-nav,.button,.map-card iframe,.yandex-rating-widget{display:none !important;}
+ body{background:#fff !important;color:#174b73 !important;}
+ .section{padding:24px 0 !important;break-inside:avoid;}
+ a{text-decoration:none !important;}
+ .container{max-width:none !important;width:100% !important;}
+}
