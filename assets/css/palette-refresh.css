@@ -461,3 +461,64 @@
  #contacts .contact-map-button{width:100%}
  .review-card-head,.map-card-head{gap:10px}
 }
+
+
+/* Мобильная версия — аккуратная компактная композиция */
+@media(max-width:900px){
+  .hero-grid{gap:22px !important}
+  .hero h1{font-size:clamp(36px,8vw,50px) !important}
+  .hero p{max-width:680px}
+  .hero-visual{min-height:330px !important}
+  .hero-auto-image{object-position:center}
+  .hero-service-tags{right:14px;top:14px}
+  .hero-visual-brand{left:18px;bottom:18px}
+  .hero-mini-cta{right:18px;bottom:18px}
+  .tire-booking-card{margin-left:0;margin-right:0}
+}
+@media(max-width:600px){
+  .container{width:calc(100% - 24px) !important}
+  .hero{padding:30px 0 28px !important}
+  .hero h1{font-size:38px !important;line-height:1.04 !important;margin-top:14px !important}
+  .hero p{font-size:16px !important;line-height:1.5 !important}
+  .hero-buttons{margin-top:20px !important;gap:9px !important}
+  .hero-buttons .button{min-height:50px !important;border-radius:14px !important}
+  .quick-actions{gap:7px !important}
+  .quick-action{padding:8px 10px !important;font-size:11px !important}
+  .hero-visual{min-height:290px !important;border-radius:24px !important}
+  .hero-service-tags{right:10px;top:10px;gap:4px}
+  .hero-service-tags span{font-size:8px !important;padding:5px 7px !important}
+  .hero-visual-label{left:12px !important;top:12px !important;font-size:9px !important;padding:7px 9px !important}
+  .hero-visual-brand{left:13px !important;bottom:13px !important;padding:7px 10px !important}
+  .hero-visual-brand strong{font-size:20px !important}
+  .hero-visual-brand span{font-size:10px !important}
+  .hero-mini-cta{right:12px !important;bottom:12px !important;padding:9px 11px !important;font-size:11px !important}
+  .tire-booking-banner{padding:24px 0 !important}
+  .tire-booking-card{border-radius:24px !important}
+  .tire-booking-visual{height:175px !important}
+  .tire-booking-content{padding:22px 18px 24px !important}
+  .tire-booking-content h2{font-size:29px !important;line-height:1.08 !important}
+  .booking-actions{gap:9px !important}
+  .booking-button{width:100% !important}
+  .booking-phone{font-size:14px !important}
+  #services .section-head:after{font-size:9px !important}
+  #services .card{padding:20px !important}
+  #services .service-icon{width:56px !important;height:56px !important;font-size:27px !important}
+  #services .card h3{font-size:22px !important;margin-top:16px !important}
+  #services .service-card-more{font-size:11px !important}
+  .engine-box,.tire-box,.autotech-banner-inner{padding:21px !important}
+  .engine-copy h2,.tire-box h2{font-size:30px !important}
+  .engine-note{min-height:190px !important}
+  .autotech-copy h2{font-size:29px !important}
+  .reviews-location-grid{gap:14px !important}
+  .yandex-review-card,.map-card{border-radius:23px !important}
+  .review-card-head,.map-card-head{padding:18px 18px 0 !important}
+  .yandex-review-card{padding:0 18px 18px !important}
+  .review-card-head .button{width:100% !important;margin-top:10px}
+  .map-card-head{padding-bottom:15px !important}
+  .yandex-map{height:250px !important}
+  #contacts .contact-card{padding:22px !important}
+  #contacts .contact-card h2{font-size:30px !important}
+  .faq details{padding:16px 17px !important}
+  .faq summary{font-size:15px !important}
+  .site-footer{padding-top:32px !important}
+}
