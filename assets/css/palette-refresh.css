@@ -1098,3 +1098,22 @@ body{overflow-x:clip;}
  .site-header .brand{font-size:21px !important;}
  .site-header .brand-mark{width:31px !important;height:31px !important;}
 }
+
+/* Финиш первого экрана: стабильная сетка и читаемая мобильная композиция */
+.hero-grid{align-items:center !important;}
+.hero-buttons{gap:10px !important;}
+.hero-buttons .button{min-height:50px !important;}
+.hero-visual{min-height:410px !important;}
+@media(max-width:900px){
+ .hero-grid{grid-template-columns:1fr !important;}
+ .hero-visual{min-height:360px !important;margin-top:8px;}
+}
+@media(max-width:700px){
+ .hero{padding-top:34px !important;padding-bottom:34px !important;}
+ .hero-buttons{display:grid !important;grid-template-columns:1fr !important;}
+ .hero-buttons .button{width:100% !important;}
+ .hero-visual{min-height:300px !important;border-radius:28px !important;}
+ .hero-visual-brand strong{font-size:23px !important;}
+ .hero-visual-brand span{font-size:11px !important;}
+ .hero-mini-cta{right:14px !important;bottom:14px !important;padding:9px 11px !important;}
+}
