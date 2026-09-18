@@ -46,3 +46,12 @@ function avtospa_service_template($template){if(!is_page()){return $template;}$t
 add_filter('template_include','avtospa_service_template',99);
 function avtospa_robots_txt($output,$public){if($public){$sitemap=home_url('/wp-sitemap.xml');$output="User-agent: *\nDisallow: /wp-admin/\nAllow: /wp-admin/admin-ajax.php\nSitemap: ".$sitemap."\n";}return $output;}
 add_filter('robots_txt','avtospa_robots_txt',10,2);
+
+/* Убираем только случайные буквальные \\n перед HTML страницы, которые иногда добавляют плагины/буфер вывода. */
+function avtospa_clean_leading_output($html){
+    return preg_replace('/^(?:\\s|\\\\n)+/u','',$html,1);
+}
+function avtospa_start_output_buffer(){
+    if(!is_admin()){ob_start('avtospa_clean_leading_output');}
+}
+add_action('template_redirect','avtospa_start_output_buffer',0);
