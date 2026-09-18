@@ -693,3 +693,58 @@ html{scroll-padding-top:82px}
  #services .card{min-height:0 !important;padding:24px !important;border-radius:20px !important}
  #services .card h3{font-size:23px !important}
 }
+
+
+/* Шиномонтаж: главный конверсионный блок */
+.tire-booking{
+ position:relative !important;overflow:hidden !important;
+ border:1px solid #d8edf8 !important;border-radius:28px !important;
+ background:linear-gradient(105deg,#f1fbff 0%,#ffffff 56%,#fff5ec 100%) !important;
+ box-shadow:0 20px 52px rgba(52,139,190,.12) !important;
+}
+.tire-booking:before{
+ content:"";position:absolute;width:260px;height:260px;right:-100px;top:-125px;
+ border-radius:50%;background:rgba(66,184,232,.14);pointer-events:none;
+}
+.tire-booking:after{
+ content:"";position:absolute;width:180px;height:180px;left:-90px;bottom:-110px;
+ border-radius:50%;background:rgba(255,200,87,.13);pointer-events:none;
+}
+.tire-booking .tire-booking-image,
+.tire-booking .tire-booking-content{position:relative;z-index:2}
+.tire-booking .tire-booking-image{
+ border-radius:22px !important;overflow:hidden !important;
+ background:#e9f7ff !important;
+}
+.tire-booking .tire-booking-image img{
+ width:100%;height:100%;object-fit:cover;
+ filter:drop-shadow(0 16px 22px rgba(39,117,157,.12));
+ transition:transform .35s ease;
+}
+.tire-booking:hover .tire-booking-image img{transform:scale(1.025)}
+.tire-booking .tire-booking-content h2{
+ color:#174b73 !important;font-size:clamp(28px,3vw,42px) !important;
+ letter-spacing:-.035em !important;
+}
+.tire-booking .tire-booking-content p{color:#5d7d96 !important;line-height:1.7 !important}
+.tire-booking .tire-booking-badge{
+ display:inline-flex !important;align-items:center;gap:7px;
+ padding:8px 13px !important;border-radius:999px !important;
+ background:#fff !important;color:#1878a8 !important;
+ border:1px solid #d5edf8 !important;font-weight:800 !important;
+ box-shadow:0 7px 18px rgba(52,139,190,.07) !important;
+}
+.tire-booking .button-primary{
+ background:linear-gradient(135deg,#ff725f,#ff8a57) !important;
+ color:#fff !important;border:0 !important;
+ box-shadow:0 13px 28px rgba(255,114,95,.24) !important;
+}
+.tire-booking .button-primary:hover{transform:translateY(-2px);box-shadow:0 17px 32px rgba(255,114,95,.29) !important}
+.tire-booking .tire-booking-phone{
+ color:#174b73 !important;font-weight:800 !important;
+}
+@media(max-width:800px){
+ .tire-booking{border-radius:22px !important}
+ .tire-booking .tire-booking-image{min-height:230px !important;border-radius:18px !important}
+ .tire-booking .tire-booking-content h2{font-size:30px !important}
+}
