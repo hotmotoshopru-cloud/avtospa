@@ -638,3 +638,58 @@ html{scroll-padding-top:82px}
 .hero-mini-cta:hover{transform:translateY(-2px)}
 /* Технический декоративный акцент без затемнения интерфейса */
 .hero-visual:focus-within{box-shadow:0 0 0 3px rgba(66,184,232,.16),0 18px 44px rgba(52,139,190,.10) !important}
+
+
+/* Услуги: карточки как отдельные визуальные сервисы */
+#services .services-grid{gap:22px !important}
+#services .card{
+ position:relative !important;
+ overflow:hidden !important;
+ min-height:250px !important;
+ padding:28px !important;
+ border:1px solid #dceff8 !important;
+ border-radius:24px !important;
+ background:linear-gradient(180deg,#fff 0%,#f8fcff 100%) !important;
+ box-shadow:0 14px 34px rgba(52,139,190,.09) !important;
+ transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease !important;
+}
+#services .card:before{
+ content:"";position:absolute;right:-55px;top:-55px;width:145px;height:145px;
+ border-radius:50%;background:#e9f7ff;opacity:.9;pointer-events:none;
+}
+#services .card:after{
+ content:"";position:absolute;left:0;bottom:0;width:100%;height:4px;
+ background:linear-gradient(90deg,#42b8e8,#229fd0,#ffc857,#ff725f);
+ opacity:.85;
+}
+#services .card:hover{
+ transform:translateY(-6px) !important;
+ box-shadow:0 22px 46px rgba(52,139,190,.14) !important;
+ border-color:#bfe4f5 !important;
+}
+#services .card h3,#services .card p,#services .card a,#services .card .service-icon{position:relative;z-index:2}
+#services .card h3{font-size:25px !important;letter-spacing:-.02em !important}
+#services .card p{color:#5d7d96 !important;line-height:1.65 !important}
+#services .card a{
+ display:inline-flex !important;align-items:center;gap:7px;
+ margin-top:14px !important;padding:10px 14px !important;
+ border-radius:999px !important;background:#edf8fd !important;
+ color:#1676a8 !important;text-decoration:none !important;
+ font-weight:700 !important;
+ transition:background .2s ease,transform .2s ease !important;
+}
+#services .card a:hover{background:#dff3fb !important;transform:translateX(3px)}
+#services .service-icon{
+ width:58px !important;height:58px !important;display:flex !important;
+ align-items:center;justify-content:center;border-radius:18px !important;
+ background:#fff !important;box-shadow:0 9px 20px rgba(52,139,190,.10) !important;
+ font-size:29px !important;margin-bottom:20px !important;
+}
+/* Шиномонтаж получает наиболее заметный CTA */
+#services .card:nth-child(3){background:linear-gradient(180deg,#fffdf8 0%,#fff8ed 100%) !important}
+#services .card:nth-child(3) a{background:#fff0df !important;color:#d86b2b !important}
+#services .card:nth-child(3) a:hover{background:#ffe6cb !important}
+@media(max-width:700px){
+ #services .card{min-height:0 !important;padding:24px !important;border-radius:20px !important}
+ #services .card h3{font-size:23px !important}
+}
