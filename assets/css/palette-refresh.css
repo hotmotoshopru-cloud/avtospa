@@ -554,3 +554,39 @@
  #services .service-card-link{display:flex}
  .engine-note:after{font-size:34px}
 }
+
+
+/* Интерактивная навигация и аккуратные состояния элементов */
+html{scroll-padding-top:82px}
+.main-nav a,.quick-action,.service-card-more,.map-link,.footer-mini-links a{
+  -webkit-tap-highlight-color:transparent;
+}
+.main-nav a:focus-visible,.button:focus-visible,.quick-action:focus-visible,.map-link:focus-visible,.footer-mini-links a:focus-visible{
+  outline:3px solid rgba(66,184,232,.35);outline-offset:3px;
+}
+.button-primary,.booking-button,.tire-cta,.contact-map-button,.nav-external{
+  cursor:pointer;
+}
+.hero-service-tags span{transition:transform .2s ease,box-shadow .2s ease}
+.hero-service-tags span:hover{transform:translateX(-3px);box-shadow:0 10px 20px rgba(52,139,190,.12)}
+#services .card:nth-child(1){border-top:3px solid #42b8e8 !important}
+#services .card:nth-child(2){border-top:3px solid #ff725f !important}
+#services .card:nth-child(3){border-top:3px solid #ffc857 !important}
+#services .card .service-icon{margin-bottom:2px}
+.engine-copy .eyebrow,.tire-box .eyebrow,.autotech-copy .eyebrow{
+  border:1px solid #d4eaf7 !important;
+}
+.contact-card-wide{isolation:isolate}
+.contact-card-wide:before{
+ content:"";position:absolute;right:115px;bottom:-65px;width:150px;height:150px;border-radius:50%;
+ border:18px solid #eef8ff;opacity:.9;pointer-events:none;
+}
+@media(max-width:600px){
+ html{scroll-padding-top:72px}
+ .hero-service-tags span:hover{transform:none}
+ #services .card:nth-child(1),#services .card:nth-child(2),#services .card:nth-child(3){border-top-width:3px !important}
+ .contact-card-wide:before{right:-20px;bottom:-60px}
+}
+@media(prefers-reduced-motion:reduce){
+ .hero-service-tags span{transition:none}
+}
