@@ -1075,3 +1075,13 @@ body{overflow-x:clip;}
  a{text-decoration:none !important;}
  .container{max-width:none !important;width:100% !important;}
 }
+
+/* Финиш футера: чёткая иерархия действий */
+.site-footer .footer-note:first-of-type{font-size:14px !important;font-weight:700 !important;}
+.site-footer .footer-address{max-width:520px;line-height:1.5 !important;}
+.site-footer .footer-actions{margin-top:12px !important;}
+.site-footer .footer-mini-links{margin-top:12px !important;}
+.site-footer .footer-inner> .footer-note{font-size:12px !important;opacity:.82;align-self:end;}
+@media(max-width:700px){
+ .site-footer .footer-inner> .footer-note{align-self:center;margin-top:18px;}
+}
