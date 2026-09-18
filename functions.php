@@ -52,6 +52,6 @@ function avtospa_clean_leading_output($html){
     return preg_replace('/^(?:\\s|\\\\n)+/u','',$html,1);
 }
 function avtospa_start_output_buffer(){
-    if(!is_admin()){ob_start('avtospa_clean_leading_output');}
+    if(!is_admin()&&!wp_doing_ajax()&&!defined('REST_REQUEST')){ob_start('avtospa_clean_leading_output');}
 }
-add_action('template_redirect','avtospa_start_output_buffer',0);
+add_action('after_setup_theme','avtospa_start_output_buffer',99);
