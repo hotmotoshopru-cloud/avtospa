@@ -37,6 +37,7 @@ if (!$service_intro) {
 }
 
 $service_pages = array();
+        $service_titles = array('Автомойка','Мойка двигателя','Шиномонтаж');
 foreach (array('Автомойка','Мойка двигателя','Шиномонтаж') as $related_title) {
     $related_page = get_page_by_title($related_title, OBJECT, 'page');
     if ($related_page && (int)$related_page->ID !== (int)get_the_ID()) {
