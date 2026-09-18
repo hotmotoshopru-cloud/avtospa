@@ -1,0 +1,64 @@
+/* АвтоСпа — новая палитра: небесно-синяя, коралловая и солнечная. Без изумрудных и тёмно-зелёных акцентов. */
+:root{
+  --ink:#174b73 !important;
+  --muted:#5d7d96 !important;
+  --line:#d7edf8 !important;
+  --accent:#229fd0 !important;
+  --accent2:#ff725f !important;
+  --blue:#42b8e8 !important;
+  --pink:#f28bb7 !important;
+  --yellow:#ffc857 !important;
+  --mint:#e9f7ff !important;
+  --peach:#fff0e8 !important;
+  --sky:#e9f7ff !important;
+  --lav:#f5efff !important;
+  --surface:#f8fcff !important;
+  --shadow:0 18px 50px rgba(52,139,190,.14) !important;
+}
+.site-header{border-bottom-color:#d7edf8 !important}
+.brand,.footer-brand{color:#229fd0 !important}
+.brand-name:after{background:linear-gradient(90deg,#42b8e8,#229fd0,#ff725f,#f28bb7) !important}
+.header-location{background:linear-gradient(135deg,#f8fdff,#eef8ff) !important;border-color:#d7edf8 !important}
+.header-location strong,.main-nav a,.contact-card h2,.section h2,.hero h1,.content-page>h1,.entry-content h2,.entry-content h3{color:#174b73 !important}
+.header-location small,.hero p,.entry-content,.entry-content>p:first-child,.card p,.section-intro,.footer-note,.contact-card p{color:#5d7d96 !important}
+.main-nav a:hover,.map-link,.entry-content a,.contact-row a{color:#1683b5 !important}
+.nav-external{background:#fff2d9 !important;border-color:#ffd48a !important;color:#a86413 !important}
+.whatsapp-link,.telegram-link{background:#f0f9ff !important;border-color:#bfe6f7 !important;color:#1683b5 !important}
+.whatsapp-link span,.telegram-link span{background:#d9f2ff !important}
+.call-link,.mobile-call{background:linear-gradient(135deg,#ff725f,#ff9470) !important;color:#fff !important;box-shadow:0 10px 24px rgba(255,114,95,.24) !important}
+.mobile-toggle{background:linear-gradient(135deg,#e9f7ff,#fff1e8) !important;color:#1683b5 !important}
+.main-nav a:hover,.mobile-nav a:hover{background:#eef8ff !important}
+.mobile-nav,.mobile-panel{background:linear-gradient(145deg,#fff,#f1f9ff) !important;border-color:#d7edf8 !important}
+.mobile-nav-external{background:#fff2d9 !important;border-color:#ffd48a !important;color:#a86413 !important}
+.hero,.section.alt{background:linear-gradient(135deg,#f2faff 0%,#fff 52%,#fff4ee 100%) !important}
+.hero-visual,.hero-card{background:linear-gradient(145deg,#e9f7ff 0%,#eef9ff 48%,#fff0e8 100%) !important;border-color:#cdeaf7 !important}
+.eyebrow,.hero-visual-label{background:#e9f7ff !important;color:#1683b5 !important}
+.button-primary{background:#229fd0 !important;color:#fff !important}
+.button-primary:hover{background:#1689b8 !important}
+.button-secondary{border-color:#cdeaf7 !important;color:#1683b5 !important}
+.quick-action{border-color:#cdeaf7 !important;color:#1683b5 !important}
+.card{border-color:#d7edf8 !important;box-shadow:0 8px 25px rgba(52,139,190,.07) !important}
+.card:hover{border-color:#b7dff1 !important;box-shadow:0 20px 40px rgba(52,139,190,.15) !important}
+.service-icon{background:#e9f7ff !important}
+.engine-wash-card .service-icon{background:#fff0e8 !important}
+.engine-box{border-color:#cdeaf7 !important;background:rgba(255,255,255,.95) !important}
+.engine-section{background:linear-gradient(135deg,#f1faff 0%,#fff 55%,#fff5ee 100%) !important}
+.tire-section,.tire-booking-banner{background:linear-gradient(135deg,#fff4ec 0%,#fff 52%,#eef9ff 100%) !important}
+.tire-box,.tire-booking-card{border-color:#ffd0c4 !important}
+.booking-kicker{background:#fff0e8 !important;color:#d85d4d !important}
+.booking-button,.tire-cta,.mobile-tire,.hero-mini-cta{background:#ff725f !important;color:#fff !important}
+.booking-phone{color:#1683b5 !important}
+.booking-badge{background:#e9f7ff !important;border-color:#c7e7f5 !important}
+.booking-badge span{color:#1683b5 !important}
+.autotech-banner{background:linear-gradient(135deg,#eef9ff 0%,#fff 55%,#fff3df 100%) !important}
+.autotech-banner-inner{border-color:#d7edf8 !important}
+.contact-card{background:linear-gradient(135deg,#e9f7ff,#eef9ff 55%,#fff0e8) !important;border-color:#cdeaf7 !important}
+.contact-row strong{color:#1683b5 !important}
+.site-footer{background:linear-gradient(135deg,#e9f7ff,#f0f8ff,#fff0e5) !important;border-top-color:#d7edf8 !important}
+.avtospa-nav-active{color:#1683b5 !important}
+.avtospa-progress{background:linear-gradient(90deg,#42b8e8,#229fd0,#ff725f,#f28bb7) !important}
+.avtospa-floating-book{background:#ff725f !important;box-shadow:0 14px 32px rgba(255,114,95,.28) !important}
+.tire-ring{background:radial-gradient(circle,#fff 0 38%,#e9f7ff 39% 52%,#42b8e8 53% 62%,#fff 63%) !important;box-shadow:0 18px 35px rgba(66,184,232,.18) !important}
+.tire-bubbles span{border-color:rgba(66,184,232,.24) !important}
+.tire-spark{color:#ffb02e !important}
+@media(max-width:900px){.mobile-booking-bar{background:rgba(255,255,255,.97) !important;border-color:#c7e7f5 !important}}
