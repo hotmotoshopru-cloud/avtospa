@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main class="section">
+<main id="content" class="section">
  <div class="container">
   <article class="content-page">
    <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="<?php echo esc_url(home_url('/')); ?>">АвтоСпа</a><span aria-hidden="true">›</span><span aria-current="page"><?php the_title(); ?></span></nav>
