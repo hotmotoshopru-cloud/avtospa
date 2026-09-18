@@ -318,3 +318,61 @@
 .site-footer a{color:#1683b5 !important}
 .site-footer a:hover{color:#ff725f !important}
 .avtospa-floating-book{border:2px solid rgba(255,255,255,.92) !important}
+
+
+/* Следующий этап — CTA и микровзаимодействия в стиле референса */
+.hero-buttons .button-primary,
+.booking-button,
+.tire-cta,
+.contact-map-button{
+  position:relative;overflow:hidden;
+}
+.hero-buttons .button-primary:after,
+.booking-button:after,
+.tire-cta:after,
+.contact-map-button:after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(110deg,transparent 0%,rgba(255,255,255,.28) 45%,transparent 70%);
+  transform:translateX(-120%);transition:transform .55s ease;pointer-events:none;
+}
+.hero-buttons .button-primary:hover:after,
+.booking-button:hover:after,
+.tire-cta:hover:after,
+.contact-map-button:hover:after{transform:translateX(120%)}
+
+.hero-buttons .button-primary{min-height:52px;padding-left:22px;padding-right:22px}
+.hero-buttons .button-secondary{min-height:52px}
+.quick-action{background:rgba(255,255,255,.94) !important}
+.quick-action:first-child{border-color:#bfe0f3 !important}
+.quick-action:nth-child(2){border-color:#ffd5c8 !important}
+.quick-action:nth-child(3){border-color:#ffe0a2 !important}
+
+.tire-booking-card{position:relative}
+.tire-booking-card:after{
+ content:"";position:absolute;left:42%;top:0;bottom:0;width:1px;background:#d9eaf4;
+ pointer-events:none;
+}
+.tire-booking-content h2{color:#173f69 !important;font-size:clamp(30px,3.2vw,43px) !important;letter-spacing:-.04em}
+.booking-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.booking-phone{font-size:15px;font-weight:900}
+.booking-badge{box-shadow:0 10px 25px rgba(52,139,190,.08) !important}
+
+#services .service-card-more{transition:transform .2s ease,background .2s ease,box-shadow .2s ease}
+#services .card:hover .service-card-more{transform:translateX(3px);box-shadow:0 7px 16px rgba(52,139,190,.10)}
+#services .card:first-child:after{background:#42b8e8}
+#services .engine-wash-card:after{background:#ff725f}
+#services .tire-service-card:after{background:#ffc857}
+
+.autotech-banner-inner>.button{transition:transform .2s ease,box-shadow .2s ease}
+.autotech-banner-inner>.button:hover{transform:translateY(-3px) scale(1.02)}
+
+@media(max-width:900px){
+ .tire-booking-card:after{display:none}
+ .booking-actions{justify-content:center}
+}
+@media(max-width:600px){
+ .hero-buttons .button{width:100%}
+ .quick-actions{justify-content:flex-start}
+ .tire-booking-content h2{font-size:31px !important}
+ .booking-phone{width:100%;text-align:center}
+}
