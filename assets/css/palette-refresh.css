@@ -621,3 +621,20 @@ html{scroll-padding-top:82px}
  .hero-visual-brand{max-width:58%}
  .hero-service-tags{max-width:58%}
 }
+
+
+/* Детализация hero: информационные метки и визуальная глубина */
+.hero-visual{position:relative;overflow:hidden}
+.hero-visual .hero-service-tags{z-index:4}
+.hero-visual .hero-visual-brand{z-index:5}
+.hero-visual .hero-mini-cta{z-index:6}
+.hero-visual:global{isolation:isolate}
+.hero-visual:before{content:"";position:absolute;pointer-events:none;border-radius:50%;z-index:0}
+.hero-visual:after{content:"";position:absolute;pointer-events:none;border-radius:50%;z-index:0}
+.hero-auto-image{position:relative;z-index:2;filter:drop-shadow(0 22px 24px rgba(39,117,157,.14))}
+.hero-service-tags span{backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.hero-visual-brand{backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.hero-mini-cta{transition:transform .2s ease,box-shadow .2s ease}
+.hero-mini-cta:hover{transform:translateY(-2px)}
+/* Технический декоративный акцент без затемнения интерфейса */
+.hero-visual:focus-within{box-shadow:0 0 0 3px rgba(66,184,232,.16),0 18px 44px rgba(52,139,190,.10) !important}
