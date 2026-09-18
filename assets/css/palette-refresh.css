@@ -960,9 +960,6 @@ html{scroll-padding-top:82px}
  .footer-mini-links{justify-content:center !important}
  .footer-phone{margin-left:auto;margin-right:auto}
 }
-/* Убираем случайный некорректный псевдоселектор из предыдущих слоёв */
-.hero-visual:global{isolation:auto !important}
-
 
 /* SEO/internal navigation cards */
 .internal-links-section{background:linear-gradient(135deg,#f7fcff 0%,#fff8f4 100%)}
@@ -990,3 +987,11 @@ img{max-width:100%;height:auto;}
 @media(prefers-reduced-motion:reduce){.skip-link{transition:none;}}
 
 .tire-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.tire-actions .button{min-width:210px;justify-content:center}.contact-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.contact-actions .button{min-width:190px;justify-content:center}@media(max-width:700px){.tire-actions,.contact-actions{display:grid;grid-template-columns:1fr}.tire-actions .button,.contact-actions .button{width:100%;min-width:0}}
+
+/* Финальная мобильная устойчивость */
+html{overflow-x:clip;}
+body{overflow-x:clip;}
+@media(max-width:700px){
+ .button,.call-link,.social-link,.nav-external,.mobile-toggle{min-height:44px;}
+ .phone,.footer-phone,.contact-phone{overflow-wrap:anywhere;}
+}
