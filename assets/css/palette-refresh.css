@@ -62,3 +62,5 @@
 .tire-bubbles span{border-color:rgba(66,184,232,.24) !important}
 .tire-spark{color:#ffb02e !important}
 @media(max-width:900px){.mobile-booking-bar{background:rgba(255,255,255,.97) !important;border-color:#c7e7f5 !important}}
+
+.social-link.is-placeholder{cursor:default;opacity:1 !important}.social-link.is-placeholder:hover{transform:none !important;box-shadow:none !important}.tire-service-image{display:block;width:100%;max-width:320px;height:170px;object-fit:contain;border-radius:24px;filter:drop-shadow(0 16px 22px rgba(52,139,190,.16));position:relative;z-index:1}.tire-booking-visual{min-width:190px !important}@media(max-width:900px){.tire-service-image{max-width:260px;height:150px}}@media(max-width:600px){.tire-service-image{max-width:310px;height:150px;margin:0 auto}.tire-booking-visual{min-width:0 !important}}
