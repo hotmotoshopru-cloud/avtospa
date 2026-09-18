@@ -748,3 +748,44 @@ html{scroll-padding-top:82px}
  .tire-booking .tire-booking-image{min-height:230px !important;border-radius:18px !important}
  .tire-booking .tire-booking-content h2{font-size:30px !important}
 }
+
+
+/* Мойка двигателя — самостоятельный акцентный блок */
+#engine-wash{
+ position:relative !important;overflow:hidden !important;
+ border-radius:28px !important;
+ background:linear-gradient(115deg,#fff7f1 0%,#ffffff 52%,#eefaff 100%) !important;
+ border:1px solid #e3edf4 !important;
+ box-shadow:0 18px 46px rgba(52,139,190,.10) !important;
+}
+#engine-wash:before{
+ content:"";position:absolute;right:-80px;top:-90px;width:250px;height:250px;
+ border-radius:50%;background:rgba(255,114,95,.10);pointer-events:none;
+}
+#engine-wash:after{
+ content:"";position:absolute;left:-75px;bottom:-105px;width:210px;height:210px;
+ border-radius:50%;background:rgba(66,184,232,.11);pointer-events:none;
+}
+#engine-wash>*{position:relative;z-index:2}
+#engine-wash h2{
+ color:#174b73 !important;font-size:clamp(28px,3.4vw,43px) !important;
+ letter-spacing:-.035em !important;
+}
+#engine-wash p{color:#5d7d96 !important;line-height:1.7 !important}
+#engine-wash .button{
+ border-radius:999px !important;box-shadow:0 11px 25px rgba(52,139,190,.10) !important;
+}
+#engine-wash .button-primary{
+ background:linear-gradient(135deg,#229fd0,#42b8e8) !important;color:#fff !important;
+ border:0 !important;box-shadow:0 13px 28px rgba(34,159,208,.23) !important;
+}
+#engine-wash .button-primary:hover{transform:translateY(-2px)}
+#engine-wash .engine-icon,
+#engine-wash .feature-icon{
+ background:#fff !important;border:1px solid #d9edf7 !important;
+ box-shadow:0 9px 22px rgba(52,139,190,.08) !important;
+}
+@media(max-width:700px){
+ #engine-wash{border-radius:22px !important}
+ #engine-wash h2{font-size:30px !important}
+}
