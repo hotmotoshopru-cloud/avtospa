@@ -962,3 +962,15 @@ html{scroll-padding-top:82px}
 }
 /* Убираем случайный некорректный псевдоселектор из предыдущих слоёв */
 .hero-visual:global{isolation:auto !important}
+
+
+/* SEO/internal navigation cards */
+.internal-links-section{background:linear-gradient(135deg,#f7fcff 0%,#fff8f4 100%)}
+.internal-links-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.internal-link-card{display:flex;flex-direction:column;gap:7px;padding:20px;border:1px solid #d7edf8;border-radius:22px;background:#fff;box-shadow:0 12px 30px rgba(52,139,190,.08);text-decoration:none;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.internal-link-card:hover{transform:translateY(-4px);box-shadow:0 18px 38px rgba(52,139,190,.14);border-color:#9ed8ef}
+.internal-link-card>span{font-size:25px}
+.internal-link-card strong{font-size:16px;color:#174b73}
+.internal-link-card small{font-size:12px;line-height:1.45;color:#5d7d96}
+@media(max-width:900px){.internal-links-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.internal-links-grid{grid-template-columns:1fr}.internal-link-card{padding:17px}}
