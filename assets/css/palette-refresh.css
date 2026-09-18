@@ -1122,3 +1122,11 @@ body{overflow-x:clip;}
 .hero-auto-image,.tire-service-image{display:block !important;}
 .hero-auto-image{aspect-ratio:900/620;object-fit:contain;}
 .tire-service-image{aspect-ratio:900/620;object-fit:contain;}
+
+/* Финальная настройка CTA на узких экранах */
+@media(max-width:700px){
+ .booking-actions{display:grid !important;grid-template-columns:1fr !important;gap:10px !important;}
+ .booking-actions .booking-button{width:100% !important;}
+ .booking-phone{display:flex !important;align-items:center;justify-content:center;min-height:44px;padding:10px 14px;border-radius:14px;background:#f2faff;border:1px solid #cdeaf7;font-weight:800;}
+ .tire-actions .button{min-height:48px !important;}
+}
