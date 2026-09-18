@@ -36,12 +36,6 @@ if (!$service_intro) {
     $service_intro = 'Услуга АвтоСпа в Москве. Уточните условия и запишитесь по телефону.';
 }
 
-$seo_terms = array(
-    'Автомойка' => 'автомойка в Москве, автомойка Полярный проезд, АвтоСпа',
-    'Мойка двигателя' => 'мойка двигателя в Москве, мойка двигателя Полярный проезд, АвтоСпа',
-    'Шиномонтаж' => 'шиномонтаж в Москве, шиномонтаж Полярный проезд, АвтоСпа'
-);
-
 $service_pages = array();
 foreach (array('Автомойка','Мойка двигателя','Шиномонтаж') as $related_title) {
     $related_page = get_page_by_title($related_title, OBJECT, 'page');
@@ -81,7 +75,7 @@ foreach (array('Автомойка','Мойка двигателя','Шином�
             <div class="entry-content service-entry-content">
                 <div class="service-seo-intro">
                     <span class="eyebrow">АвтоСпа • Москва</span>
-                    <p><strong><?php echo esc_html($seo_terms[$service_title] ?? $service_title); ?></strong></p>
+                    <p><strong><?php echo esc_html($service_title); ?></strong> в Москве, Полярный проезд, 18, стр. 2. Актуальные условия и запись уточняйте по телефону.</p>
                 </div>
                 <?php if ($service_content) : ?>
                     <?php echo wp_kses_post($service_content); ?>
