@@ -1130,3 +1130,11 @@ body{overflow-x:clip;}
  .booking-phone{display:flex !important;align-items:center;justify-content:center;min-height:44px;padding:10px 14px;border-radius:14px;background:#f2faff;border:1px solid #cdeaf7;font-weight:800;}
  .tire-actions .button{min-height:48px !important;}
 }
+
+/* Финальная читаемость текста на мобильных */
+@media(max-width:700px){
+ .hero p{font-size:15px !important;line-height:1.65 !important;}
+ .section-head p{font-size:14px !important;line-height:1.6 !important;}
+ .service-card p,.benefit span,.internal-link-card small{line-height:1.55 !important;}
+ .faq-section .faq summary{font-size:15px !important;line-height:1.35 !important;}
+}
