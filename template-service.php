@@ -36,6 +36,10 @@ if (!$service_intro) {
     $service_intro = 'Услуга АвтоСпа в Москве. Уточните условия и запишитесь по телефону.';
 }
 
+$service_phone = get_theme_mod('avtospa_phone', '+7 916 299-98-59');
+$service_phone_href = avtospa_phone_href();
+$service_content = str_replace(array('+7 916 299-98-59', 'tel:+79162999859'), array($service_phone, 'tel:' . $service_phone_href), $service_content);
+
 $service_pages = array();
 foreach (array('Автомойка','Мойка двигателя','Шиномонтаж') as $related_title) {
     $related_page = get_page_by_title($related_title, OBJECT, 'page');
