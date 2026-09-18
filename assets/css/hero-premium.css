@@ -11,12 +11,12 @@
 .hero p{max-width:650px}
 .hero-buttons{gap:12px;flex-wrap:wrap}
 .hero-buttons .button{min-height:52px;display:inline-flex;align-items:center;justify-content:center}
-.hero-buttons .button-primary{box-shadow:0 14px 30px rgba(24,183,173,.20)}
-.hero-buttons .button-primary:hover{transform:translateY(-3px);box-shadow:0 18px 36px rgba(24,183,173,.27)}
+.hero-buttons .button-primary{box-shadow:0 14px 30px rgba(52,139,190,.20)}
+.hero-buttons .button-primary:hover{transform:translateY(-3px);box-shadow:0 18px 36px rgba(52,139,190,.27)}
 .quick-actions{position:relative;z-index:2}
 .quick-action{display:inline-flex;align-items:center;gap:6px}
 .hero-visual{transition:transform .35s ease,box-shadow .35s ease}
-.hero-visual:hover{transform:translateY(-5px);box-shadow:0 30px 70px rgba(24,183,173,.19)}
+.hero-visual:hover{transform:translateY(-5px);box-shadow:0 30px 70px rgba(52,139,190,.19)}
 .hero-visual:before{animation:heroOrb 8s ease-in-out infinite}
 .hero-visual:after{animation:heroOrb 7s ease-in-out infinite reverse}
 .hero-visual-brand strong{letter-spacing:-.03em}
@@ -25,20 +25,20 @@
 @keyframes heroOrb{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-14px,12px) scale(1.08)}}
 
 /* Дополнительная интерактивность первого экрана: светлые инфо-плашки и акцент записи. */
-.hero .eyebrow{display:inline-flex;align-items:center;gap:7px;padding:8px 12px;border:1px solid #cceee9;border-radius:999px;background:rgba(255,255,255,.78);box-shadow:0 8px 22px rgba(24,183,173,.07)}
-.hero .eyebrow:before{content:"●";font-size:8px;color:#18b7ad;animation:heroPulse 1.8s ease-in-out infinite}
+.hero .eyebrow{display:inline-flex;align-items:center;gap:7px;padding:8px 12px;border:1px solid #d7edf8;border-radius:999px;background:rgba(255,255,255,.78);box-shadow:0 8px 22px rgba(52,139,190,.07)}
+.hero .eyebrow:before{content:"●";font-size:8px;color:#229fd0;animation:heroPulse 1.8s ease-in-out infinite}
 .hero-buttons .button-primary{position:relative;overflow:hidden}
 .hero-buttons .button-primary:after{content:"";position:absolute;inset:0;transform:translateX(-120%);background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent);transition:transform .55s ease}
 .hero-buttons .button-primary:hover:after{transform:translateX(120%)}
 .quick-action:first-child{border-color:#ffcfad;background:linear-gradient(135deg,#fff7ef,#fff);color:#e8792f}
 .quick-action:nth-child(2){border-color:#c8e9f7;background:linear-gradient(135deg,#eefaff,#fff);color:#278eb8}
 .quick-action:nth-child(3){border-color:#d8d2f8;background:linear-gradient(135deg,#f5f2ff,#fff);color:#6f62b6}
-.hero-visual{box-shadow:0 24px 60px rgba(24,183,173,.14),0 4px 0 rgba(255,255,255,.9) inset}
-.hero-visual-label{box-shadow:0 8px 18px rgba(24,183,173,.08);border:1px solid #d9f0ef}
+.hero-visual{box-shadow:0 24px 60px rgba(52,139,190,.14),0 4px 0 rgba(255,255,255,.9) inset}
+.hero-visual-label{box-shadow:0 8px 18px rgba(52,139,190,.08);border:1px solid #d9f0ef}
 .hero-visual-brand{padding:9px 12px;border-radius:16px;background:rgba(255,255,255,.74);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.9)}
 .hero-mini-cta{border:1px solid rgba(255,255,255,.7)}
 @keyframes heroPulse{0%,100%{transform:scale(1);opacity:.55}50%{transform:scale(1.35);opacity:1}}
 
 @media(max-width:900px){.hero-grid{gap:28px}.hero-grid>div:first-child:before{display:none}.hero h1{letter-spacing:-.025em}}
-@media(max-width:700px){.hero{padding-top:26px}.hero-grid{gap:22px}.hero h1{font-size:clamp(34px,10vw,48px)}.hero-buttons .button{width:100%}.hero-buttons .button-secondary{order:2}.hero-visual:hover{transform:none}.hero .eyebrow{padding:7px 10px}.hero-visual-brand{padding:7px 9px}.quick-actions{gap:8px}.quick-action{box-shadow:0 6px 16px rgba(24,183,173,.06)}}
+@media(max-width:700px){.hero{padding-top:26px}.hero-grid{gap:22px}.hero h1{font-size:clamp(34px,10vw,48px)}.hero-buttons .button{width:100%}.hero-buttons .button-secondary{order:2}.hero-visual:hover{transform:none}.hero .eyebrow{padding:7px 10px}.hero-visual-brand{padding:7px 9px}.quick-actions{gap:8px}.quick-action{box-shadow:0 6px 16px rgba(52,139,190,.06)}}
 @media(prefers-reduced-motion:reduce){.hero-visual,.hero-visual:before,.hero-visual:after{animation:none;transition:none}.hero-grid>div:first-child:before,.hero .eyebrow:before{animation:none}.hero-buttons .button-primary:after{display:none}}
