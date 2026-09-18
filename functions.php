@@ -31,6 +31,9 @@ function avtospa_social_meta(){if(avtospa_has_seo_plugin()){return;}$image=avtos
 add_action('wp_head','avtospa_social_meta',8);
 function avtospa_seo_audit(){if(avtospa_has_seo_plugin()||is_admin()){return;}if(is_front_page()){echo '<meta name="robots" content="index, follow, max-image-preview:large">';return;}if(is_page()){echo '<meta name="robots" content="index, follow, max-image-preview:large">';}}
 add_action('wp_head','avtospa_seo_audit',9);
+function avtospa_image_alt($attr,$attachment,$size){if(!empty($attr['alt'])){return $attr;}$title=trim(wp_strip_all_tags(get_the_title($attachment)));if(!$title){$title='АвтоСпа в Москве';}$attr['alt']=$title.' — АвтоСпа, Москва';return $attr;}
+add_filter('wp_get_attachment_image_attributes','avtospa_image_alt',10,3);
+
 
 
 function avtospa_head_seo(){if(avtospa_has_seo_plugin()||!(is_front_page()||is_home())){return;}$title=wp_get_document_title();$description=avtospa_seo_description();$url=home_url('/');$image=get_the_post_thumbnail_url(get_queried_object_id(),'large');echo '<meta name="description" content="'.esc_attr($description).'">'.PHP_EOL;echo '<meta property="og:type" content="website">'.PHP_EOL;echo '<meta property="og:locale" content="ru_RU">'.PHP_EOL;echo '<meta property="og:title" content="'.esc_attr($title).'">'.PHP_EOL;echo '<meta property="og:description" content="'.esc_attr($description).'">'.PHP_EOL;echo '<meta property="og:url" content="'.esc_url($url).'">'.PHP_EOL;echo '<meta property="og:site_name" content="АвтоСпа">'.PHP_EOL;if($image){echo '<meta property="og:image" content="'.esc_url($image).'">'.PHP_EOL;}echo '<meta name="twitter:card" content="summary_large_image">'.PHP_EOL;echo '<meta name="twitter:title" content="'.esc_attr($title).'">'.PHP_EOL;echo '<meta name="twitter:description" content="'.esc_attr($description).'">'.PHP_EOL;if($image){echo '<meta name="twitter:image" content="'.esc_url($image).'">'.PHP_EOL;}}
