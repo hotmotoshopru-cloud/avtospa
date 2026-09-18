@@ -102,6 +102,7 @@ foreach (array('Автомойка','Мойка двигателя','Шином�
             <?php endif; ?>
 
             <div class="service-page-bottom">
+                <a class="service-bottom-card service-bottom-contact" href="tel:<?php echo esc_attr($service_phone_href); ?>"><span>📞</span><div><strong>Позвонить в АвтоСпа</strong><small><?php echo esc_html($service_phone); ?></small></div></a>
                 <a class="service-bottom-card service-bottom-tire" href="<?php echo esc_url(isset($service_pages['Шиномонтаж']) ? $service_pages['Шиномонтаж'] : home_url('/#tire-booking')); ?>">
                     <span>🛞</span><div><strong>Шиномонтаж</strong><small>Записаться на шиномонтаж</small></div>
                 </a>
