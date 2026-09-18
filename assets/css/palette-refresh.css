@@ -789,3 +789,58 @@ html{scroll-padding-top:82px}
  #engine-wash{border-radius:22px !important}
  #engine-wash h2{font-size:30px !important}
 }
+
+
+/* Отзывы, карта и контакты — единый светлый финальный блок */
+.reviews-location,
+.location-contacts,
+#contacts{
+ position:relative;
+}
+.reviews-location .card,
+.location-contacts .card,
+#contacts .card{
+ border:1px solid #dceff8 !important;
+ border-radius:22px !important;
+ background:#fff !important;
+ box-shadow:0 14px 36px rgba(52,139,190,.08) !important;
+}
+.reviews-location h2,
+.location-contacts h2,
+#contacts h2{
+ color:#174b73 !important;
+ letter-spacing:-.03em !important;
+}
+.reviews-location .rating,
+.location-contacts .rating{
+ background:linear-gradient(135deg,#eefaff,#fff5ee) !important;
+ border:1px solid #dceff8 !important;
+ border-radius:18px !important;
+}
+.reviews-location .map,
+.location-contacts .map{
+ overflow:hidden !important;
+ border-radius:22px !important;
+ border:1px solid #dceff8 !important;
+ box-shadow:0 12px 28px rgba(52,139,190,.08) !important;
+}
+#contacts .contact-item{
+ border:1px solid #e0f0f7 !important;
+ border-radius:18px !important;
+ background:linear-gradient(135deg,#fff,#f8fcff) !important;
+ transition:transform .2s ease,box-shadow .2s ease !important;
+}
+#contacts .contact-item:hover{
+ transform:translateY(-3px);
+ box-shadow:0 12px 25px rgba(52,139,190,.10) !important;
+}
+#contacts a{color:#1676a8 !important}
+#contacts .contact-icon{
+ background:#eaf8fe !important;
+ color:#229fd0 !important;
+ border-radius:14px !important;
+}
+@media(max-width:700px){
+ .reviews-location .card,.location-contacts .card,#contacts .card{border-radius:18px !important}
+ .reviews-location .map,.location-contacts .map{border-radius:18px !important}
+}
