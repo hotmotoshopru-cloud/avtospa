@@ -1042,3 +1042,17 @@ body{overflow-x:clip;}
  .section.alt:has(> .container .benefits){padding-top:26px !important;padding-bottom:26px !important;}
  .section.alt:has(> .container .benefits) .benefit{padding:14px 16px !important;}
 }
+
+/* Финальный акцент FAQ и нижнего CTA */
+.faq-section{padding-top:46px !important;padding-bottom:38px !important;}
+.faq-section .section-head{margin-bottom:18px !important;}
+.faq-section .faq{max-width:920px;margin:0 auto;}
+.faq-section .faq details{margin-bottom:10px !important;border-radius:16px !important;}
+.faq-section .faq summary{padding:16px 18px !important;}
+.faq-section .faq p{padding:0 18px 16px !important;margin:0 !important;}
+.mobile-booking-bar{box-shadow:0 -10px 28px rgba(52,139,190,.12) !important;}
+@media(max-width:700px){
+ .faq-section{padding-top:34px !important;padding-bottom:28px !important;}
+ .faq-section .faq summary{padding:15px 16px !important;}
+ .faq-section .faq p{padding:0 16px 15px !important;}
+}
