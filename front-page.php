@@ -8,7 +8,7 @@
    <p>АвтоСпа — автомойка и шиномонтаж по адресу: Москва, Полярный проезд, 18, стр. 2. Актуальные услуги и условия уточняйте по телефону.</p>
    <div class="hero-buttons"><a class="button button-primary" href="#tire-service">Записаться на шиномонтаж</a><a class="button button-secondary" href="#services">Услуги</a></div>
   </div>
-  <div class="hero-card"><div class="hero-card-content"><strong>АвтоСпа</strong><small>Полярный проезд, 18, стр. 2 • Москва</small></div></div>
+  <div class="hero-card" aria-label="Шиномонтаж АвтоСпа"><div class="hero-card-content"><strong>АвтоСпа</strong><small>Шиномонтаж</small></div></div>
  </div>
 </section>
 
@@ -19,6 +19,17 @@
    <article class="card"><div class="service-icon">🚿</div><h3>Автомойка</h3><p>Уточните доступные виды мойки и актуальные условия по телефону.</p></article>
    <article class="card engine-wash-card"><div class="service-icon">🔧</div><h3>Мойка двигателя</h3><p>Одна из важных услуг автомойки АвтоСпа. Актуальные условия и возможность выполнения услуги уточняйте по телефону.</p><a class="button button-secondary" style="margin-top:18px" href="<?php echo esc_url(avtospa_service_page_url('moyka-dvigatelya')); ?>">Подробнее об услуге</a></article>
    <article class="card"><div class="service-icon">🛞</div><h3>Шиномонтаж</h3><p>Запишитесь на шиномонтаж по телефону и согласуйте удобное время.</p><a class="button button-primary" style="margin-top:18px" href="<?php echo esc_url(avtospa_service_page_url('shinomontazh')); ?>">Записаться</a></article>
+  </div>
+ </div>
+</section>
+
+<section class="section reference-banners" id="tire-banners">
+ <div class="container">
+  <div class="section-head"><div><h2>Варианты баннера для раздела «Шиномонтаж»</h2><p class="section-intro">Визуальный блок в стиле утверждённого референса.</p></div></div>
+  <div class="reference-banner-grid">
+   <a class="reference-banner rb-one" href="<?php echo esc_url(avtospa_service_page_url('shinomontazh')); ?>"><span>ШИНОМОНТАЖ</span><strong>Шиномонтаж<br>в Москве</strong><em>Быстро. Качественно. Надёжно.</em><b>Записаться →</b><i>🛞</i></a>
+   <a class="reference-banner rb-two" href="<?php echo esc_url(avtospa_service_page_url('shinomontazh')); ?>"><span>ШИНОМОНТАЖ</span><strong>Сезонная замена<br>шин</strong><em>Подготовьтесь к сезону вместе с АвтоСпа</em><b>Записаться →</b><i>❄️ 🛞 ☀️</i></a>
+   <a class="reference-banner rb-three" href="<?php echo esc_url(avtospa_service_page_url('shinomontazh')); ?>"><span>ШИНОМОНТАЖ</span><strong>Профессиональный<br>шиномонтаж</strong><em>Современное оборудование и опытные мастера</em><b>Записаться →</b><i>🛞</i></a>
   </div>
  </div>
 </section>
