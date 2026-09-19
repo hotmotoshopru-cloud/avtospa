@@ -17,8 +17,8 @@
   <div class="section-head"><div><h2>Услуги</h2><p class="section-intro">На главной странице выделены основные направления АвтоСпа: автомойка, мойка двигателя и шиномонтаж. Актуальный перечень и условия можно уточнить по телефону.</p></div></div>
   <div class="cards">
    <article class="card"><div class="service-icon">🚿</div><h3>Автомойка</h3><p>Уточните доступные виды мойки и актуальные условия по телефону.</p></article>
-   <article class="card engine-wash-card"><div class="service-icon">🔧</div><h3>Мойка двигателя</h3><p>Одна из важных услуг автомойки АвтоСпа. Актуальные условия и возможность выполнения услуги уточняйте по телефону.</p><a class="button button-secondary" style="margin-top:18px" href="#engine-wash">Подробнее об услуге</a></article>
-   <article class="card"><div class="service-icon">🛞</div><h3>Шиномонтаж</h3><p>Запишитесь на шиномонтаж по телефону и согласуйте удобное время.</p><a class="button button-primary" style="margin-top:18px" href="#tire-service">Записаться</a></article>
+   <article class="card engine-wash-card"><div class="service-icon">🔧</div><h3>Мойка двигателя</h3><p>Одна из важных услуг автомойки АвтоСпа. Актуальные условия и возможность выполнения услуги уточняйте по телефону.</p><a class="button button-secondary" style="margin-top:18px" href="<?php echo esc_url(avtospa_service_page_url('moyka-dvigatelya')); ?>">Подробнее об услуге</a></article>
+   <article class="card"><div class="service-icon">🛞</div><h3>Шиномонтаж</h3><p>Запишитесь на шиномонтаж по телефону и согласуйте удобное время.</p><a class="button button-primary" style="margin-top:18px" href="<?php echo esc_url(avtospa_service_page_url('shinomontazh')); ?>">Записаться</a></article>
   </div>
  </div>
 </section>
