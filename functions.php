@@ -35,7 +35,7 @@ function avtospa_phone_href() {
 }
 function avtospa_whatsapp_url() {
     $custom = get_theme_mod('avtospa_whatsapp','');
-    return $custom ? $custom : 'https://wa.me/' . preg_replace('/D+/', '', avtospa_phone_href());
+    return $custom ? $custom : 'https://wa.me/' . preg_replace('/\\D+/', '', avtospa_phone_href());
 }
 function avtospa_telegram_url() {
     $custom = get_theme_mod('avtospa_telegram','');
