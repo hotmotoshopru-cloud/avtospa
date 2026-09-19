@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-labelledby="t d">
+<title id="t">АвтоСпа — шиномонтаж</title><desc id="d">Светлая иллюстрация автомобиля и шиномонтажа в современном сервисном боксе.</desc>
+<defs>
+ <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#e9f7ff"/><stop offset=".55" stop-color="#fff"/><stop offset="1" stop-color="#fff1e7"/></linearGradient>
+ <linearGradient id="blue" x1="0" x2="1"><stop stop-color="#1670d5"/><stop offset="1" stop-color="#45a2ff"/></linearGradient>
+ <linearGradient id="orange" x1="0" x2="1"><stop stop-color="#ff8b32"/><stop offset="1" stop-color="#ff514d"/></linearGradient>
+ <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#216bb5" flood-opacity=".16"/></filter>
+</defs>
+<rect width="900" height="620" rx="42" fill="url(#bg)"/>
+<path d="M0 445 C170 360 260 390 390 455 S670 570 900 410 V620H0Z" fill="#dff1ff"/>
+<path d="M0 95 C180 35 285 80 420 155 S675 260 900 120" fill="none" stroke="#fff" stroke-width="72" opacity=".72"/>
+<g opacity=".8">
+ <rect x="65" y="120" width="270" height="12" rx="6" fill="#b8dcf8"/>
+ <rect x="65" y="150" width="190" height="9" rx="4.5" fill="#d3e9f8"/>
+ <rect x="610" y="90" width="190" height="10" rx="5" fill="#c5e2f8"/>
+</g>
+<g transform="translate(390 90)" filter="url(#shadow)">
+ <circle cx="270" cy="285" r="190" fill="#173d68"/>
+ <circle cx="270" cy="285" r="150" fill="#263f58"/>
+ <circle cx="270" cy="285" r="112" fill="#eef7ff" stroke="#9dbbd3" stroke-width="8"/>
+ <circle cx="270" cy="285" r="82" fill="#fff" stroke="#5f83a4" stroke-width="7"/>
+ <circle cx="270" cy="285" r="28" fill="url(#blue)"/>
+ <g stroke="#6c8eaa" stroke-width="8" stroke-linecap="round">
+  <path d="M270 205v160M190 285h160M214 229l112 112M326 229L214 341"/>
+ </g>
+</g>
+<g transform="translate(95 330)">
+ <path d="M30 105 C65 52 112 24 182 18 L302 18 C360 19 401 43 436 91 L470 105 C484 111 492 124 492 139 V167 H16 V139 C16 122 20 113 30 105Z" fill="#fff" stroke="#2d7fdc" stroke-width="6"/>
+ <path d="M176 24 L284 24 C319 26 344 43 365 76 H130 C141 47 156 29 176 24Z" fill="#dff1ff"/>
+ <path d="M42 112 H464" stroke="#ff6f32" stroke-width="10" stroke-linecap="round"/>
+ <circle cx="104" cy="167" r="48" fill="#173d68"/><circle cx="104" cy="167" r="25" fill="#dbefff"/>
+ <circle cx="405" cy="167" r="48" fill="#173d68"/><circle cx="405" cy="167" r="25" fill="#dbefff"/>
+</g>
+<g transform="translate(78 84)">
+ <rect width="250" height="74" rx="24" fill="#fff" stroke="#cfe6f8"/>
+ <circle cx="40" cy="37" r="20" fill="#e8f5ff"/>
+ <path d="M40 24v26M27 37h26" stroke="#2478df" stroke-width="4" stroke-linecap="round"/>
+ <text x="73" y="33" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#173d68">Шиномонтаж</text>
+ <text x="73" y="53" font-family="Arial,sans-serif" font-size="12" fill="#6a8197">АвтоСпа • Москва</text>
+</g>
+<g transform="translate(610 450)">
+ <rect width="215" height="72" rx="22" fill="#fff" stroke="#cfe6f8"/>
+ <circle cx="38" cy="36" r="20" fill="#fff0e6"/>
+ <path d="M31 36h14M38 29v14" stroke="#ff7331" stroke-width="4" stroke-linecap="round"/>
+ <text x="70" y="33" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#173d68">Современное</text>
+ <text x="70" y="52" font-family="Arial,sans-serif" font-size="12" fill="#6a8197">оборудование</text>
+</g>
+</svg>
