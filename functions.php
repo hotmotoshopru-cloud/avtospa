@@ -16,6 +16,20 @@ function avtospa_floating_booking(){if(!is_front_page()){return;}echo '<a class=
 function avtospa_customize_register($wp_customize){$wp_customize->add_section('avtospa_contacts',array('title'=>'АвтоСпа — контакты','priority'=>30));$wp_customize->add_setting('avtospa_phone',array('default'=>'+7 916 299-98-59','sanitize_callback'=>'sanitize_text_field'));$wp_customize->add_control('avtospa_phone',array('label'=>'Телефон','section'=>'avtospa_contacts','type'=>'text'));$wp_customize->add_setting('avtospa_address',array('default'=>'Россия, Москва, Полярный проезд, 18, стр. 2','sanitize_callback'=>'sanitize_text_field'));$wp_customize->add_control('avtospa_address',array('label'=>'Адрес','section'=>'avtospa_contacts','type'=>'text'));$wp_customize->add_setting('avtospa_whatsapp',array('default'=>'','sanitize_callback'=>'esc_url_raw'));$wp_customize->add_control('avtospa_whatsapp',array('label'=>'WhatsApp URL','section'=>'avtospa_contacts','type'=>'url'));$wp_customize->add_setting('avtospa_telegram',array('default'=>'','sanitize_callback'=>'esc_url_raw'));$wp_customize->add_control('avtospa_telegram',array('label'=>'Telegram URL','section'=>'avtospa_contacts','type'=>'url'));} add_action('customize_register','avtospa_customize_register');
 function avtospa_phone_href(){return preg_replace('/[^0-9+]/','',(string)get_theme_mod('avtospa_phone','+7 916 299-98-59'));}
 function avtospa_service_page_url($title,$fallback){$page=get_page_by_title($title,OBJECT,'page');return ($page&&$page->ID)?get_permalink($page->ID):home_url($fallback);}
+function avtospa_clean_primary_menu_items($items,$args){
+    if(empty($items) || empty($args->theme_location) || $args->theme_location !== 'primary'){ return $items; }
+    $seen=array();
+    foreach($items as $key=>$item){
+        $title=trim(wp_strip_all_tags((string)$item->title));
+        $url=untrailingslashit((string)$item->url);
+        $signature=mb_strtolower($title.'|'.$url);
+        if(isset($seen[$signature])){ unset($items[$key]); continue; }
+        $seen[$signature]=true;
+    }
+    return array_values($items);
+}
+add_filter('wp_nav_menu_objects','avtospa_clean_primary_menu_items',20,2);
+
 function avtospa_fallback_menu(){$services=avtospa_service_page_url('Автомойка','/#services');$engine=avtospa_service_page_url('Мойка двигателя','/#engine-wash');$tire=avtospa_service_page_url('Шиномонтаж','/#tire-booking');echo '<ul><li><a href="'.esc_url($services).'">Услуги</a></li><li><a href="'.esc_url($engine).'">Мойка двигателя</a></li><li><a href="'.esc_url($tire).'">Шиномонтаж</a></li><li><a href="'.esc_url(home_url('/#contacts')).'">Контакты</a></li></ul>';}
 function avtospa_has_seo_plugin(){return defined('WPSEO_VERSION')||defined('AIOSEO_VERSION')||defined('RANK_MATH_VERSION')||class_exists('RankMath');}
 function avtospa_seo_description(){return 'АвтоСпа в Москве: автомойка, мойка двигателя и шиномонтаж. Полярный проезд, 18, стр. 2. Телефон для записи и уточнения условий.';}
