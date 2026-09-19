@@ -3,7 +3,7 @@ Theme Name: АвтоSPA
 Theme URI: https://github.com/hotmotoshopru-cloud/avtospa
 Author: АвтоSPA
 Description: Светлая доработанная тема АвтоСпа по утверждённому референсу.
-Version: 1.1.0
+Version: 1.1.1
 Requires at least: 6.0
 Requires PHP: 7.4
 Text Domain: avtospa
@@ -54,3 +54,5 @@ Text Domain: avtospa
 @media(max-width:1100px){.phone-link span:last-child{display:none}.hero-copy{padding-left:0}}
 @media(max-width:850px){.phone-link{display:none}.nav-external{margin-left:0}.hero-copy{padding-left:0}}
 @media(max-width:600px){.hero-visual{border-radius:32px}.hero-benefits{right:7px}.benefit{min-width:0}}
+
+.brand-logo{position:relative;display:inline-flex;align-items:center;gap:3px}.brand-sparkles{display:inline-block;color:var(--orange);font-size:18px;letter-spacing:-5px;margin-right:5px;transform:translateY(-9px)}.brand-sparkles::first-letter{color:var(--blue)}
