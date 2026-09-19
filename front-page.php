@@ -8,7 +8,7 @@
    <p>АвтоСпа — автомойка и шиномонтаж по адресу: Москва, Полярный проезд, 18, стр. 2. Актуальные услуги и условия уточняйте по телефону.</p>
    <div class="hero-buttons"><a class="button button-primary" href="#tire-service">Записаться на шиномонтаж</a><a class="button button-secondary" href="#services">Услуги</a></div>
   </div>
-  <div class="hero-card"><div class="hero-card-content"><strong>АвтоСпа</strong><small>Полярный проезд, 18, стр. 2 • Москва</small></div></div>
+  <div class="hero-card hero-visual"><img src="<?php echo esc_url(get_template_directory_uri().'/assets/img/hero-service.svg'); ?>" alt="АвтоСпа — шиномонтаж и автомобильный сервис"><div class="hero-visual-label"><strong>Шиномонтаж</strong><span>Современное оборудование • Москва</span></div></div>
  </div>
 </section>
 
@@ -16,15 +16,15 @@
  <div class="container">
   <div class="section-head"><div><h2>Услуги</h2><p class="section-intro">На главной странице выделены основные направления АвтоСпа: автомойка, мойка двигателя и шиномонтаж. Актуальный перечень и условия можно уточнить по телефону.</p></div></div>
   <div class="cards">
-   <article class="card"><div class="service-icon">🚿</div><h3>Автомойка</h3><p>Уточните доступные виды мойки и актуальные условия по телефону.</p></article>
-   <article class="card engine-wash-card"><div class="service-icon">🔧</div><h3>Мойка двигателя</h3><p>Одна из важных услуг автомойки АвтоСпа. Актуальные условия и возможность выполнения услуги уточняйте по телефону.</p><a class="button button-secondary" style="margin-top:18px" href="<?php echo esc_url(avtospa_service_page_url('moyka-dvigatelya')); ?>">Подробнее об услуге</a></article>
-   <article class="card"><div class="service-icon">🛞</div><h3>Шиномонтаж</h3><p>Запишитесь на шиномонтаж по телефону и согласуйте удобное время.</p><a class="button button-primary" style="margin-top:18px" href="<?php echo esc_url(avtospa_service_page_url('shinomontazh')); ?>">Записаться</a></article>
+   <article class="card"><div class="service-icon">01</div><h3>Автомойка</h3><p>Уточните доступные виды мойки и актуальные условия по телефону.</p></article>
+   <article class="card engine-wash-card"><div class="service-icon">02</div><h3>Мойка двигателя</h3><p>Одна из важных услуг автомойки АвтоСпа. Актуальные условия и возможность выполнения услуги уточняйте по телефону.</p><a class="button button-secondary" style="margin-top:18px" href="<?php echo esc_url(avtospa_service_page_url('moyka-dvigatelya')); ?>">Подробнее об услуге</a></article>
+   <article class="card"><div class="service-icon">03</div><h3>Шиномонтаж</h3><p>Запишитесь на шиномонтаж по телефону и согласуйте удобное время.</p><a class="button button-primary" style="margin-top:18px" href="<?php echo esc_url(avtospa_service_page_url('shinomontazh')); ?>">Записаться</a></article>
   </div>
  </div>
 </section>
 
 <section id="engine-wash" class="section engine-section">
- <div class="container"><div class="engine-box"><div class="engine-copy"><span class="eyebrow">Отдельная услуга</span><h2>Мойка двигателя</h2><p>Мойка двигателя — отдельное направление АвтоСпа, которое важно учитывать при выборе услуг. Возможность выполнения услуги и актуальные условия уточняйте по телефону.</p><a class="button button-primary" href="#contacts">Уточнить условия мойки двигателя</a></div><div class="engine-note"><span class="service-icon">🔧</span><strong>Мойка двигателя</strong><span>АвтоСпа • Москва</span></div></div></div>
+ <div class="container"><div class="engine-box"><div class="engine-copy"><span class="eyebrow">Отдельная услуга</span><h2>Мойка двигателя</h2><p>Мойка двигателя — отдельное направление АвтоСпа, которое важно учитывать при выборе услуг. Возможность выполнения услуги и актуальные условия уточняйте по телефону.</p><a class="button button-primary" href="#contacts">Уточнить условия мойки двигателя</a></div><div class="engine-note"><span class="service-icon">02</span><strong>Мойка двигателя</strong><span>АвтоСпа • Москва</span></div></div></div>
 </section>
 
 <section id="tire-service" class="section tire-section">
