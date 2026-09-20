@@ -23,3 +23,47 @@ Text Domain: avtospa
 @keyframes floatSpark{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-10px) rotate(8deg)}}
 @media(max-width:1000px){.main-nav{display:none}.mobile-toggle{display:block}.header-actions .call-link{display:none}.hero{padding-top:48px}.hero-grid,.contact-grid,.reviews-location-grid,.engine-box{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}.benefits{grid-template-columns:1fr 1fr}.tire-box,.autotech-banner-inner{grid-template-columns:1fr;display:grid}.tire-cta,.autotech-banner-inner .button{width:100%}.hero-card{min-height:280px}.engine-note{min-height:170px}}
 @media(max-width:600px){.container{width:min(100% - 22px,1180px)}.header-inner{min-height:68px}.brand{font-size:22px}.social-link{display:none}.hero h1{font-size:42px}.hero p{font-size:17px}.cards,.benefits{grid-template-columns:1fr}.section{padding:55px 0}.section-head{display:block}.section-head .section-intro{margin-top:12px}.engine-box{padding:24px}.engine-copy p{font-size:16px}.review-card-head,.map-card-head{display:block}.review-card-head .button{margin-top:12px}.yandex-map{height:300px}.contact-card{padding:25px}.footer-inner{display:block}.footer-note{margin-top:8px}.content-page{padding:18px 0}.breadcrumbs{margin-bottom:18px;font-size:13px}.content-page>h1{font-size:38px;margin-bottom:20px}.entry-content{font-size:16px}.entry-content>p:first-child{font-size:18px}.entry-content h2{font-size:30px;margin-top:34px}.entry-content h3{font-size:22px}.page-actions .button{width:100%}}
+
+/* Cloudflare Pages static home fixes */
+[id], section{scroll-margin-top:96px}
+.brand-mark{flex:0 0 32px}
+.call-copy{display:flex;align-items:baseline;gap:6px}
+.call-copy strong,.call-copy small{display:inline}
+.call-copy small{font-size:11px;font-weight:900;opacity:.95}
+.hero-h1-accent{display:block}
+.quick-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.quick-action{display:inline-flex;align-items:center;gap:5px;padding:6px 9px;border-radius:999px;background:rgba(255,255,255,.86);border:1px solid #d7edf8;color:#174b73;font-size:14px;font-weight:800}
+.quick-action:hover{border-color:#a9ddec;background:#fff}
+.hero-facts{display:flex;flex-wrap:wrap;gap:20px;margin-top:18px}
+.hero-facts span{display:flex;align-items:baseline;gap:6px;color:#174b73}
+.hero-facts b{font-size:14px}
+.hero-facts small{font-size:12px;color:#5d7d96}
+.hero-visual{min-height:390px;border-radius:34px;background:linear-gradient(145deg,#e9f7ff,#fff0df 58%,#e8f7ff);box-shadow:var(--shadow);padding:24px;position:relative;overflow:hidden;border:1px solid rgba(52,139,190,.16);display:flex;flex-direction:column;align-items:center;justify-content:center}
+.hero-visual:before{content:"";position:absolute;width:300px;height:300px;border-radius:50%;right:-90px;top:-110px;background:rgba(52,139,190,.16)}
+.hero-visual-label{position:absolute;left:24px;top:22px;font-size:13px;font-weight:900;color:#174b73;letter-spacing:.03em;z-index:2}
+.hero-service-tags{position:absolute;left:24px;right:24px;top:50px;display:flex;flex-wrap:wrap;gap:7px;z-index:2}
+.hero-service-tags span{padding:5px 8px;border-radius:999px;background:rgba(255,255,255,.88);font-size:12px;font-weight:800;color:#174b73;border:1px solid rgba(215,237,248,.9)}
+.hero-auto-image{margin-top:52px;width:88%;max-height:275px;object-fit:contain;position:relative;z-index:1}
+.hero-visual-brand{position:absolute;left:24px;bottom:22px;display:flex;flex-direction:column;z-index:2}
+.hero-visual-brand strong{font-size:17px}
+.hero-visual-brand span{font-size:12px;color:#5d7d96}
+.hero-mini-cta{position:absolute;right:24px;bottom:22px;padding:8px 12px;border-radius:12px;background:#fff;color:#174b73;font-size:13px;font-weight:900;border:1px solid #d7edf8;z-index:2}
+.hero-bubble{position:absolute;border-radius:50%;pointer-events:none}
+.hb1{width:12px;height:12px;right:90px;top:110px;background:#ff9b52}
+.hb2{width:8px;height:8px;right:70px;top:145px;background:#42b8e8}
+.hb3{width:6px;height:6px;left:65px;bottom:90px;background:#f28bb7}
+@media(max-width:1000px){
+ .hero-visual{min-height:330px}
+ .hero-auto-image{max-height:235px}
+}
+@media(max-width:600px){
+ .hero-visual{min-height:310px;padding:18px}
+ .hero-visual-label{left:18px;top:18px}
+ .hero-service-tags{left:18px;right:18px;top:46px}
+ .hero-service-tags span{font-size:11px}
+ .hero-auto-image{width:94%;margin-top:62px;max-height:205px}
+ .hero-visual-brand{left:18px;bottom:18px}
+ .hero-mini-cta{right:18px;bottom:18px}
+ .hero-facts{gap:10px 16px}
+ .hero-facts span{display:block}
+}
