@@ -67,3 +67,63 @@ Text Domain: avtospa
  .hero-facts{gap:10px 16px}
  .hero-facts span{display:block}
 }
+
+
+/* Финальная полировка статической версии АвтоСпа */
+.site-header{box-shadow:0 4px 18px rgba(23,75,115,.05)}
+.header-inner{gap:28px}
+.brand{flex:0 0 auto}
+.main-nav{flex:1;justify-content:center}
+.main-nav ul{gap:24px}
+.header-actions{flex:0 0 auto}
+.call-link{min-height:44px;padding:0 17px;gap:8px;white-space:nowrap}
+.call-copy{display:flex;align-items:center;gap:7px;line-height:1}
+.call-copy strong{font-size:13px;white-space:nowrap}
+.call-copy small{font-size:11px;white-space:nowrap}
+.hero{padding:72px 0 60px}
+.hero-grid{gap:58px}
+.hero h1{max-width:700px}
+.hero p{max-width:610px;line-height:1.65}
+.hero-buttons{margin-top:24px}
+.hero-visual{min-height:390px}
+.hero-visual-label{font-size:12px}
+.hero-auto-image{width:90%;max-height:280px}
+.hero-visual-brand{bottom:20px}
+.hero-visual-brand strong{font-size:16px}
+.hero-visual-brand span{font-size:11px}
+.tire-booking-banner{padding:0 0 64px}
+.tire-booking-card{padding:26px}
+.section{padding:68px 0}
+.section-head{margin-bottom:26px}
+.cards{gap:18px}
+.card{padding:26px}
+.engine-box,.tire-box,.autotech-banner-inner{padding:32px}
+.reviews-location-grid{gap:18px}
+.yandex-review-card,.map-card{padding:23px}
+.yandex-map{height:340px;background:#eaf8ff}
+.contact-card{padding:30px}
+.internal-links-grid{gap:14px}
+.internal-link-card{padding:20px}
+.site-footer{padding:32px 0}
+
+@media(max-width:1000px){
+  .header-inner{gap:12px}
+  .hero-grid{gap:32px}
+  .hero{padding:52px 0 50px}
+}
+@media(max-width:600px){
+  .header-inner{min-height:64px}
+  .brand{font-size:21px}
+  .hero{padding:42px 0 44px}
+  .hero h1{font-size:40px}
+  .hero-visual{min-height:290px}
+  .hero-auto-image{width:94%;max-height:205px}
+  .hero-visual-label{left:18px;top:18px}
+  .hero-visual-brand{left:18px;bottom:16px}
+  .hero-visual-brand span{font-size:10px}
+  .tire-booking-banner{padding-bottom:45px}
+  .tire-booking-card{padding:18px}
+  .section{padding:52px 0}
+  .engine-box,.tire-box,.autotech-banner-inner{padding:23px}
+  .yandex-map{height:300px}
+}
