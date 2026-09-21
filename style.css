@@ -127,3 +127,40 @@ Text Domain: avtospa
   .engine-box,.tire-box,.autotech-banner-inner{padding:23px}
   .yandex-map{height:300px}
 }
+
+
+/* Шапка: реальные пункты меню + WhatsApp / Telegram */
+.header-inner{gap:16px}
+.main-nav{gap:12px;min-width:0}
+.main-nav ul{gap:15px;flex-wrap:nowrap}
+.main-nav ul a{white-space:nowrap;font-size:13px}
+.header-actions{gap:7px}
+.social-link{width:40px;height:40px;min-height:40px;padding:0;border-radius:13px;display:inline-flex;flex:0 0 40px}
+.social-link svg{width:21px;height:21px;fill:#fff;display:block}
+.whatsapp-link{background:#25d366}
+.telegram-link{background:#229ed9}
+.social-link:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 9px 18px rgba(52,139,190,.18)}
+.call-link{min-height:40px;padding:0 13px}
+.call-copy{gap:5px}
+.call-copy strong{font-size:12px}
+.call-copy small{font-size:10px}
+.nav-external{font-size:13px!important;padding:9px 11px!important}
+@media(max-width:1280px){
+  .main-nav ul{gap:10px}
+  .main-nav ul a{font-size:12px}
+  .nav-external{font-size:12px!important}
+  .call-link{padding:0 10px}
+  .call-copy strong{font-size:11px}
+}
+@media(max-width:1120px){
+  .main-nav ul li:nth-child(4){display:none}
+  .main-nav ul{gap:12px}
+}
+@media(max-width:1000px){
+  .main-nav{display:none}
+  .header-actions .social-link{display:none}
+  .header-actions .call-link{display:none}
+}
+@media(max-width:600px){
+  .main-nav{display:none}
+}
