@@ -1,0 +1,49 @@
+name: Package WordPress Theme
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Validate theme structure
+        run: |
+          test -f style.css
+          test -f functions.php
+          test -f index.php
+          test -f header.php
+          test -f footer.php
+          test -f page.php
+          test -f single.php
+          test -f archive.php
+          test -f 404.php
+          grep -q "Theme Name:" style.css
+          ! grep -q "<?php" style.css
+          php -l functions.php
+          php -l front-page.php
+          php -l header.php
+          php -l footer.php
+          php -l page.php
+          php -l single.php
+          php -l archive.php
+          php -l 404.php
+          php -l template-service.php
+      - name: Build installable ZIP
+        run: |
+          rm -rf package
+          mkdir -p package/avtospa
+          rsync -a --exclude='.git' --exclude='.github' --exclude='package' ./ package/avtospa/
+          cd package
+          zip -r ../avtospa-wordpress-theme.zip avtospa
+      - name: Upload theme ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: avtospa-wordpress-theme
+          path: avtospa-wordpress-theme.zip
+          if-no-files-found: error
