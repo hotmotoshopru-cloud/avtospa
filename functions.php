@@ -5,6 +5,18 @@ function avtospa_setup(){add_theme_support('title-tag');add_theme_support('post-
 function avtospa_assets(){
  $version=wp_get_theme()->get('Version');
  wp_enqueue_style('avtospa-style',get_stylesheet_uri(),array(),$version);
+ if (is_front_page()) {
+  wp_enqueue_style('avtospa-tire-booking',get_template_directory_uri().'/assets/css/tire-booking.css',array('avtospa-style'),$version);
+  wp_enqueue_style('avtospa-feature-sections',get_template_directory_uri().'/assets/css/feature-sections.css',array('avtospa-style','avtospa-tire-booking'),$version);
+  wp_enqueue_style('avtospa-location-contacts',get_template_directory_uri().'/assets/css/location-contacts-premium.css',array('avtospa-style'),$version);
+  wp_enqueue_style('avtospa-benefits-faq-footer',get_template_directory_uri().'/assets/css/benefits-faq-footer.css',array('avtospa-style'),$version);
+ }
+ if (is_page()) {
+  $service_title=trim(wp_strip_all_tags(get_the_title()));
+  if (in_array($service_title,array('Автомойка','Мойка двигателя','Шиномонтаж'),true)) {
+   wp_enqueue_style('avtospa-service-page',get_template_directory_uri().'/assets/css/service-page.css',array('avtospa-style'),$version);
+  }
+ }
  wp_enqueue_style('avtospa-responsive',get_template_directory_uri().'/assets/css/responsive.css',array('avtospa-style'),$version);
  wp_enqueue_script('avtospa-navigation',get_template_directory_uri().'/assets/js/navigation.js',array(),$version,true);wp_script_add_data('avtospa-navigation','strategy','defer');
  $interactive_css=':root{--avtospa-glow:rgba(34,159,208,.16)}.avtospa-progress{position:fixed;left:0;top:0;height:4px;width:0;background:linear-gradient(90deg,#229fd0,#58b9e8,#ff9b52,#f39acb);z-index:9999;pointer-events:none;border-radius:0 99px 99px 0}.avtospa-reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}.avtospa-reveal.is-visible{opacity:1;transform:none}.avtospa-floating-book{position:fixed;right:22px;bottom:22px;z-index:45;display:flex;align-items:center;gap:9px;padding:13px 17px;border-radius:999px;background:#ff9b52;color:#fff;font-weight:900;box-shadow:0 14px 32px rgba(255,155,82,.28);border:2px solid rgba(255,255,255,.9);transition:transform .2s ease,box-shadow .2s ease}.avtospa-floating-book:hover{transform:translateY(-4px);box-shadow:0 18px 38px rgba(255,155,82,.34)}.avtospa-floating-book .dot{width:9px;height:9px;border-radius:50%;background:#fff;box-shadow:0 0 0 6px rgba(255,255,255,.18);animation:avtospaPulse 1.8s infinite}.avtospa-nav-active{color:#229fd0!important}@keyframes avtospaPulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(.72);opacity:.65}}@media(max-width:760px){.avtospa-floating-book{display:none}}@media(prefers-reduced-motion:reduce){.avtospa-reveal{opacity:1;transform:none;transition:none}.avtospa-floating-book .dot{animation:none}}';wp_add_inline_style('avtospa-style',$interactive_css);
@@ -24,6 +36,17 @@ function avtospa_service_page_url($title,$fallback){
     }
     return home_url($fallback);
 }
+function avtospa_service_template($template){
+    if(!is_page()){return $template;}
+    $title=trim(wp_strip_all_tags(get_the_title()));
+    if(in_array($title,array('Автомойка','Мойка двигателя','Шиномонтаж'),true)){
+        $candidate=get_template_directory().'/template-service.php';
+        if(file_exists($candidate)){return $candidate;}
+    }
+    return $template;
+}
+add_filter('template_include','avtospa_service_template',99);
+
 function avtospa_clean_primary_menu_items($items,$args){
     if(empty($items) || empty($args->theme_location) || $args->theme_location !== 'primary'){ return $items; }
     $seen=array();
