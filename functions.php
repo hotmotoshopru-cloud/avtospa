@@ -103,3 +103,32 @@ function avtospa_start_output_buffer(){
     if(!is_admin()&&!wp_doing_ajax()&&!defined('REST_REQUEST')){ob_start('avtospa_clean_leading_output');}
 }
 add_action('after_setup_theme','avtospa_start_output_buffer',99);
+
+
+/* Serve the approved site photos through the site's own domain.
+ * This keeps the desktop visual unchanged and avoids mobile Safari/third-party
+ * image loading failures from the external photo host.
+ */
+function avtospa_image_proxy(){
+    if(empty($_GET['avtospa_photo'])){return;}
+    $key=sanitize_key(wp_unslash($_GET['avtospa_photo']));
+    $photos=array(
+        'hero'=>'https://images.unsplash.com/photo-1781516153879-193e94f3d496?auto=format&fit=crop&fm=jpg&q=82&w=1800',
+        'wash'=>'https://images.unsplash.com/photo-1683647115932-b33455fe6a3e?auto=format&fit=crop&fm=jpg&q=82&w=900',
+        'tire'=>'https://images.unsplash.com/photo-1645445522156-9ac06bc7a767?auto=format&fit=crop&fm=jpg&q=82&w=900',
+        'service'=>'https://images.unsplash.com/photo-1771340012319-0b4fca008b54?auto=format&fit=crop&fm=jpg&q=82&w=900',
+        'prices'=>'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&fm=jpg&q=82&w=900'
+    );
+    if(!isset($photos[$key])){status_header(404);exit;}
+    $response=wp_remote_get($photos[$key],array('timeout'=>15,'redirection'=>3));
+    if(is_wp_error($response)){status_header(502);exit;}
+    $code=(int)wp_remote_retrieve_response_code($response);
+    $body=wp_remote_retrieve_body($response);
+    if($code!==200 || $body===''){status_header(502);exit;}
+    nocache_headers();
+    header('Content-Type:image/jpeg');
+    header('Cache-Control:public,max-age=86400');
+    echo $body;
+    exit;
+}
+add_action('template_redirect','avtospa_image_proxy');
