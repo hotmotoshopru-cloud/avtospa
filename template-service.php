@@ -70,7 +70,7 @@ foreach (array('Автомойка','Мойка двигателя','Шином�
                 <div class="service-page-visual" aria-hidden="true">
                     <span class="service-page-orbit orbit-one"></span>
                     <span class="service-page-orbit orbit-two"></span>
-                    <img class="service-page-icon service-page-icon-img" src="<?php echo esc_url(get_template_directory_uri() . ($service_title === 'Шиномонтаж' ? '/assets/img/tire-service.svg' : '/assets/img/hero-auto.svg')); ?>" alt="" aria-hidden="true" loading="eager" decoding="async">
+                    <span class="service-page-icon"><?php echo $service_title === 'Шиномонтаж' ? '🛞' : ($service_title === 'Мойка двигателя' ? '🔧' : '🚿'); ?></span>
                     <strong>АвтоСпа</strong>
                     <small>Москва · Полярный проезд, 18, стр. 2</small>
                 </div>
