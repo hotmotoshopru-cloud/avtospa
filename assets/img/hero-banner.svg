@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 650">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#dff7ff"/><stop offset=".48" stop-color="#fff"/><stop offset="1" stop-color="#eef9e6"/></linearGradient>
+<linearGradient id="water" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#7bdcff" stop-opacity=".9"/><stop offset="1" stop-color="#0e9fe0" stop-opacity=".15"/></linearGradient>
+<filter id="blur"><feGaussianBlur stdDeviation="18"/></filter>
+</defs>
+<rect width="1600" height="650" fill="url(#bg)"/>
+<ellipse cx="1370" cy="90" rx="280" ry="220" fill="#9fe4f7" opacity=".24" filter="url(#blur)"/>
+<ellipse cx="180" cy="590" rx="260" ry="150" fill="#9bd947" opacity=".13" filter="url(#blur)"/>
+<path d="M0 530 C220 430 360 620 570 505 S950 455 1120 565 S1420 600 1600 500 L1600 650 L0 650Z" fill="#dff7ff"/>
+<path d="M0 95 C170 15 290 140 405 70" fill="none" stroke="url(#water)" stroke-width="30" stroke-linecap="round"/>
+<path d="M965 115 C1050 35 1120 210 1205 105 C1270 30 1320 105 1390 35" fill="none" stroke="#22b9ef" stroke-width="12" opacity=".7" stroke-linecap="round"/>
+<g fill="#fff" opacity=".85">
+<circle cx="160" cy="145" r="8"/><circle cx="220" cy="105" r="5"/><circle cx="330" cy="160" r="7"/><circle cx="910" cy="85" r="6"/><circle cx="1000" cy="175" r="5"/>
+</g>
+<g fill="#64b83e">
+<path d="M90 500c-30-70 0-120 65-150 12 64-9 112-65 150Z"/><path d="M1420 540c10-70 58-112 120-122-6 65-48 108-120 122Z"/><path d="M1500 95c-40-48-33-92 4-127 36 40 34 84-4 127Z"/>
+</g>
+<g opacity=".75" stroke="#0aa8e4" stroke-width="5" fill="none">
+<path d="M760 500c-90-75-105-165-25-250"/><path d="M820 515c-40-120-10-200 55-260"/><path d="M875 500c20-110 70-170 150-205"/>
+</g>
+<image href="hero-auto.svg" x="730" y="120" width="770" height="430" preserveAspectRatio="xMidYMid meet"/>
+<rect x="0" y="0" width="1600" height="650" fill="none" stroke="#c8ebf5" stroke-width="4"/>
+</svg>
