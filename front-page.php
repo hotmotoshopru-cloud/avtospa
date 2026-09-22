@@ -8,7 +8,7 @@ $avtospa_service_urls=array(
 ?>
 <main id="content">
 <section class="hero">
- <div class="hero-photo" aria-hidden="true"><img src="https://images.unsplash.com/photo-1781516153879-193e94f3d496?auto=format&fit=crop&fm=jpg&q=82&w=1800" alt=""></div>
+ <div class="hero-photo" aria-hidden="true"><img src="https://wsrv.nl/?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1781516153879-193e94f3d496%3Fauto%3Dformat%26fit%3Dcrop%26fm%3Djpg%26q%3D82%26w%3D1800&w=1800&q=82&output=jpg" alt=""></div>
  <div class="hero-photo-shade" aria-hidden="true"></div>
  <div class="container hero-grid">
   <div class="hero-copy">
@@ -26,10 +26,10 @@ $avtospa_service_urls=array(
  </div>
  <div class="container hero-shortcuts">
   <div class="hero-shortcuts-grid">
-   <a class="shortcut" href="<?php echo esc_url($avtospa_service_urls['Автомойка']); ?>"><div class="shortcut-photo"><img src="https://images.unsplash.com/photo-1683647115932-b33455fe6a3e?auto=format&fit=crop&fm=jpg&q=82&w=900" alt="Автомойка АвтоСпа" loading="eager" decoding="async" referrerpolicy="no-referrer"></div><div class="shortcut-copy"><h3>Автомойка ›</h3><p>Профессиональная мойка любого автомобиля</p></div></a>
-   <a class="shortcut" href="<?php echo esc_url($avtospa_service_urls['Шиномонтаж']); ?>"><div class="shortcut-photo"><img src="https://images.unsplash.com/photo-1645445522156-9ac06bc7a767?auto=format&fit=crop&fm=jpg&q=82&w=900" alt="Шиномонтаж АвтоСпа" loading="eager" decoding="async" referrerpolicy="no-referrer"></div><div class="shortcut-copy"><h3>Шиномонтаж ›</h3><p>Быстро, качественно, с гарантией</p></div></a>
-   <a class="shortcut" href="https://xn----7sbbgabsz5cgqkebg.su/"><div class="shortcut-photo"><img src="https://images.unsplash.com/photo-1771340012319-0b4fca008b54?auto=format&fit=crop&fm=jpg&q=82&w=900" alt="Автосервис АвтоСпа" loading="eager" decoding="async" referrerpolicy="no-referrer"></div><div class="shortcut-copy"><h3>Автосервис ›</h3><p>Диагностика и ремонт любой сложности</p></div></a>
-   <a class="shortcut" href="<?php echo esc_url(home_url('/автомойка-цены/')); ?>"><div class="shortcut-photo"><img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&fm=jpg&q=82&w=900" alt="Цены АвтоСпа" loading="eager" decoding="async" referrerpolicy="no-referrer"></div><div class="shortcut-copy"><h3>Цены ›</h3><p>Прозрачные цены без скрытых платежей</p></div></a>
+   <a class="shortcut" href="<?php echo esc_url($avtospa_service_urls['Автомойка']); ?>"><div class="shortcut-photo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1683647115932-b33455fe6a3e%3Fauto%3Dformat%26fit%3Dcrop%26fm%3Djpg%26q%3D82%26w%3D900&w=900&q=82&output=jpg" alt="Автомойка АвтоСпа" loading="eager" decoding="async" referrerpolicy="no-referrer"></div><div class="shortcut-copy"><h3>Автомойка ›</h3><p>Профессиональная мойка любого автомобиля</p></div></a>
+   <a class="shortcut" href="<?php echo esc_url($avtospa_service_urls['Шиномонтаж']); ?>"><div class="shortcut-photo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1645445522156-9ac06bc7a767%3Fauto%3Dformat%26fit%3Dcrop%26fm%3Djpg%26q%3D82%26w%3D900&w=900&q=82&output=jpg" alt="Шиномонтаж АвтоСпа" loading="eager" decoding="async" referrerpolicy="no-referrer"></div><div class="shortcut-copy"><h3>Шиномонтаж ›</h3><p>Быстро, качественно, с гарантией</p></div></a>
+   <a class="shortcut" href="https://xn----7sbbgabsz5cgqkebg.su/"><div class="shortcut-photo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1771340012319-0b4fca008b54%3Fauto%3Dformat%26fit%3Dcrop%26fm%3Djpg%26q%3D82%26w%3D900&w=900&q=82&output=jpg" alt="Автосервис АвтоСпа" loading="eager" decoding="async" referrerpolicy="no-referrer"></div><div class="shortcut-copy"><h3>Автосервис ›</h3><p>Диагностика и ремонт любой сложности</p></div></a>
+   <a class="shortcut" href="<?php echo esc_url(home_url('/автомойка-цены/')); ?>"><div class="shortcut-photo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1503376780353-7e6692767b70%3Fauto%3Dformat%26fit%3Dcrop%26fm%3Djpg%26q%3D82%26w%3D900&w=900&q=82&output=jpg" alt="Цены АвтоСпа" loading="eager" decoding="async" referrerpolicy="no-referrer"></div><div class="shortcut-copy"><h3>Цены ›</h3><p>Прозрачные цены без скрытых платежей</p></div></a>
   </div>
  </div>
 </section>
