@@ -15,7 +15,7 @@ $avtospa_service_urls=array(
    <span class="eyebrow">ЧИСТОТА • ЗАБОТА • ПРОФЕССИОНАЛИЗМ</span>
    <h1>АвтоСпа <span class="hero-h1-accent">Больше, чем просто мойка</span></h1>
    <p>Профессиональная автомойка, шиномонтаж и автосервис в Москве. Заботимся о вашем автомобиле 24 часа в сутки.</p>
-   <div class="hero-buttons"><a class="button button-primary" href="#services">📅 Записаться на мойку</a><a class="button button-secondary" href="#services">Все услуги&nbsp;›</a></div>
+   <div class="hero-buttons"><a class="button button-primary" href="#services">Записаться на мойку</a><a class="button button-secondary" href="#services">Все услуги&nbsp;›</a></div>
    <div class="hero-facts">
     <div class="hero-fact"><span class="fact-icon">◷</span><strong>Работаем<br>круглосуточно</strong></div>
     <div class="hero-fact"><span class="fact-icon">◆</span><strong>Качественные<br>материалы</strong></div>
