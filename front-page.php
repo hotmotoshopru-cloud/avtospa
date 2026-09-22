@@ -1,38 +1,4 @@
 <?php get_header(); ?>
-<style>
-.hero-visual{min-height:430px;border-radius:38px;background:linear-gradient(145deg,#e9f7ff 0%,#eaf7ff 48%,#fff0df 100%);border:1px solid #d7edf8;box-shadow:0 24px 60px rgba(24,183,173,.14);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;isolation:isolate}.hero-visual:before{content:"";position:absolute;width:330px;height:330px;border-radius:50%;right:-100px;top:-100px;background:rgba(88,185,232,.2);z-index:-1}.hero-visual:after{content:"";position:absolute;width:230px;height:230px;border-radius:50%;left:-90px;bottom:-100px;background:rgba(243,154,203,.18);z-index:-1}.hero-visual-label{position:absolute;left:26px;top:24px;padding:9px 13px;border-radius:999px;background:#fff;color:#168c86;font-size:11px;font-weight:900;letter-spacing:.08em}.hero-visual-brand{position:absolute;left:28px;bottom:25px}.hero-visual-brand strong{display:block;font-size:28px;color:#229fd0}.hero-visual-brand span{font-size:13px;color:#5f8790}.hero-bubble{position:absolute;border-radius:50%;border:2px solid rgba(24,183,173,.25);animation:heroBubble 5s ease-in-out infinite}.hb1{width:20px;height:20px;right:22%;top:28%}.hb2{width:12px;height:12px;left:18%;top:20%;animation-delay:1s}.hb3{width:28px;height:28px;right:15%;bottom:18%;animation-delay:2s}.hero-mini-cta{position:absolute;right:25px;bottom:24px;padding:11px 14px;border-radius:15px;background:#ff9b52;color:#fff;font-weight:900;box-shadow:0 10px 22px rgba(255,155,82,.22);transition:transform .2s ease}.hero-mini-cta:hover{transform:translateY(-3px)}.quick-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.quick-action{padding:10px 14px;border-radius:999px;background:#fff;border:1px solid #d7edf8;color:#168c86;font-size:13px;font-weight:900;box-shadow:0 8px 20px rgba(24,183,173,.07);transition:transform .2s ease,box-shadow .2s ease}.quick-action:hover{transform:translateY(-2px);box-shadow:0 12px 25px rgba(24,183,173,.14)}.mobile-booking-bar{display:none}@keyframes heroBubble{0%,100%{transform:translateY(0);opacity:.5}50%{transform:translateY(-15px);opacity:1}}
-
-/* Точная типографика первого экрана по утверждённому референсу */
-.hero h1 .hero-h1-accent{color:#167bd0 !important}
-.hero-service-tags{
-  position:absolute;right:22px;top:22px;z-index:3;display:grid;gap:8px;justify-items:end;
-}
-.hero-service-tags span{
-  display:inline-flex;align-items:center;padding:8px 11px;border-radius:999px;
-  background:rgba(255,255,255,.94);border:1px solid #d2e8f6;color:#174b73;
-  font-size:11px;font-weight:900;box-shadow:0 8px 18px rgba(52,139,190,.10);
-  backdrop-filter:blur(8px);white-space:nowrap;
-}
-.hero-service-tags span:nth-child(2){border-color:#ffd6c8}
-.hero-service-tags span:nth-child(3){border-color:#ffe0a2}
-@media(max-width:700px){
- .hero-service-tags{right:14px;top:14px;gap:5px}
- .hero-service-tags span{font-size:9px;padding:6px 8px}
- .hero h1 .hero-h1-accent{display:inline}
-}
-
-.hero-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-top:18px;max-width:720px}
-.hero-facts span{display:flex;flex-direction:column;padding:11px 13px;border-radius:16px;background:rgba(255,255,255,.88);border:1px solid #d5eaf7;box-shadow:0 7px 18px rgba(52,139,190,.06)}
-.hero-facts span:nth-child(2){border-color:#ffd6ca}
-.hero-facts span:nth-child(3){border-color:#ffe1a4}
-.hero-facts b{font-size:13px;color:#174b73}
-.hero-facts small{margin-top:2px;font-size:10px;line-height:1.3;color:#5d7d96}
-@media(max-width:700px){
- .hero-facts{grid-template-columns:1fr;gap:7px;margin-top:14px}
- .hero-facts span{padding:9px 11px}
- .hero-facts small{font-size:9px}
-}
-</style>
 <?php
 $avtospa_service_urls=array(
  'Автомойка'=>avtospa_service_page_url('Автомойка','/#services'),
@@ -41,12 +7,38 @@ $avtospa_service_urls=array(
 );
 ?>
 <main id="content">
-<section class="hero"><div class="container hero-grid"><div><span class="eyebrow">АвтоСпа • Москва</span><h1>Автомойка и шиномонтаж <span class="hero-h1-accent">в Москве</span></h1><p>АвтоСпа — автомойка и шиномонтаж по адресу: Москва, Полярный проезд, 18, стр. 2. Актуальные услуги и условия уточняйте по телефону.</p><div class="hero-buttons"><a class="button button-primary" href="#tire-booking">🛞 Записаться на шиномонтаж</a><a class="button button-secondary" href="#services">Услуги</a></div><div class="quick-actions"><a class="quick-action" href="<?php echo esc_url($avtospa_service_urls['Шиномонтаж']); ?>">🛞 Шиномонтаж</a><a class="quick-action" href="<?php echo esc_url($avtospa_service_urls['Мойка двигателя']); ?>">🔧 Мойка двигателя</a><a class="quick-action" href="#reviews-location">📍 Как добраться</a></div><div class="hero-facts" aria-label="Информация об АвтоСпа"><span><b>Москва</b><small>Полярный проезд, 18, стр. 2</small></span><span><b>Запись</b><small>по телефону</small></span><span><b>3 услуги</b><small>на главной</small></span></div></div><div class="hero-visual" aria-label="Автомобильная иллюстрация АвтоСпа"><span class="hero-visual-label">АВТОМОЙКА • ШИНОМОНТАЖ</span><span class="hero-bubble hb1"></span><span class="hero-bubble hb2"></span><span class="hero-bubble hb3"></span><div class="hero-service-tags" aria-label="Направления АвтоСпа"><span>🚿 Автомойка</span><span>🔧 Мойка двигателя</span><span>🛞 Шиномонтаж</span></div><img class="hero-auto-image" src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/hero-auto.svg'); ?>" alt="Автомобиль и шиномонтаж АвтоСпа" loading="eager" decoding="async" width="900" height="620"><div class="hero-visual-brand"><strong>АвтоСпа</strong><span>Москва • Полярный проезд, 18, стр. 2</span></div><a class="hero-mini-cta" href="<?php echo esc_url($avtospa_service_urls['Шиномонтаж']); ?>">🛞 Запись</a></div></div></section>
+<section class="hero">
+ <div class="hero-photo" aria-hidden="true"><img src="https://images.unsplash.com/photo-1781516153879-193e94f3d496?auto=format&fit=crop&fm=jpg&q=82&w=1800" alt=""></div>
+ <div class="hero-photo-shade" aria-hidden="true"></div>
+ <div class="container hero-grid">
+  <div class="hero-copy">
+   <span class="eyebrow">ЧИСТОТА • ЗАБОТА • ПРОФЕССИОНАЛИЗМ</span>
+   <h1>АвтоСпа <span class="hero-h1-accent">Больше, чем просто мойка</span></h1>
+   <p>Профессиональная автомойка, шиномонтаж и автосервис в Москве. Заботимся о вашем автомобиле 24 часа в сутки.</p>
+   <div class="hero-buttons"><a class="button button-primary" href="#services">📅 Записаться на мойку</a><a class="button button-secondary" href="#services">Все услуги&nbsp;›</a></div>
+   <div class="hero-facts">
+    <div class="hero-fact"><span class="fact-icon">◷</span><strong>Работаем<br>круглосуточно</strong></div>
+    <div class="hero-fact"><span class="fact-icon">◆</span><strong>Качественные<br>материалы</strong></div>
+    <div class="hero-fact"><span class="fact-icon">✓</span><strong>Опытные<br>специалисты</strong></div>
+    <div class="hero-fact"><span class="fact-icon">⌁</span><strong>Забота<br>о вашем авто</strong></div>
+   </div>
+  </div>
+ </div>
+ <div class="container hero-shortcuts">
+  <div class="hero-shortcuts-grid">
+   <a class="shortcut" href="<?php echo esc_url($avtospa_service_urls['Автомойка']); ?>"><div class="shortcut-photo"><img src="https://images.unsplash.com/photo-1683647115932-b33455fe6a3e?auto=format&fit=crop&fm=jpg&q=82&w=900" alt="Автомойка АвтоСпа" loading="lazy" decoding="async"></div><div class="shortcut-copy"><h3>Автомойка ›</h3><p>Профессиональная мойка любого автомобиля</p></div></a>
+   <a class="shortcut" href="<?php echo esc_url($avtospa_service_urls['Шиномонтаж']); ?>"><div class="shortcut-photo"><img src="https://images.unsplash.com/photo-1645445522156-9ac06bc7a767?auto=format&fit=crop&fm=jpg&q=82&w=900" alt="Шиномонтаж АвтоСпа" loading="lazy" decoding="async"></div><div class="shortcut-copy"><h3>Шиномонтаж ›</h3><p>Быстро, качественно, с гарантией</p></div></a>
+   <a class="shortcut" href="https://xn----7sbbgabsz5cgqkebg.su/"><div class="shortcut-photo"><img src="https://images.unsplash.com/photo-1771340012319-0b4fca008b54?auto=format&fit=crop&fm=jpg&q=82&w=900" alt="Автосервис АвтоСпа" loading="lazy" decoding="async"></div><div class="shortcut-copy"><h3>Автосервис ›</h3><p>Диагностика и ремонт любой сложности</p></div></a>
+   <a class="shortcut" href="<?php echo esc_url(home_url('/автомойка-цены/')); ?>"><div class="shortcut-photo"><img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&fm=jpg&q=82&w=900" alt="Цены АвтоСпа" loading="lazy" decoding="async"></div><div class="shortcut-copy"><h3>Цены ›</h3><p>Прозрачные цены без скрытых платежей</p></div></a>
+  </div>
+ </div>
+</section>
+
 <section class="tire-booking-banner" id="tire-booking"><div class="container"><div class="tire-booking-card"><div class="tire-bubbles"><span></span><span></span><span></span></div><div class="tire-booking-visual"><img class="tire-service-image" src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/tire-service.svg'); ?>" alt="Шиномонтаж АвтоСпа: автомобиль на подъёмнике и оборудование" loading="lazy" decoding="async" width="900" height="620"><div class="tire-spark spark-one" aria-hidden="true">✦</div><div class="tire-spark spark-two" aria-hidden="true">✦</div></div><div class="tire-booking-content"><span class="booking-kicker">АвтоСпа • Шиномонтаж</span><h2>Запишитесь на шиномонтаж</h2><p>Позвоните в АвтоСпа и согласуйте удобное время записи.</p><div class="booking-actions"><a class="button booking-button" href="tel:<?php echo esc_attr(avtospa_phone_href()); ?>">📞 Записаться по телефону</a><a class="booking-phone" href="tel:<?php echo esc_attr(avtospa_phone_href()); ?>"><?php echo esc_html(get_theme_mod('avtospa_phone','+7 916 299-98-59')); ?></a></div></div><div class="booking-badge"><strong>🛞</strong><span>Быстрая запись</span><small>по телефону</small></div></div></div></section>
-<section id="services" class="section"><div class="container"><div class="section-head"><div><h2>Услуги</h2><p class="section-intro">Основные направления АвтоСпа: автомойка, мойка двигателя и шиномонтаж. Актуальный перечень и условия можно уточнить по телефону.</p></div></div><div class="cards">
-<article class="card"><a class="service-card-link" href="<?php echo esc_url($avtospa_service_urls['Автомойка']); ?>"><div class="service-icon">🚿</div><h3>Автомойка</h3><p>Уточните доступные виды мойки и актуальные условия по телефону.</p><span class="service-card-more">Открыть страницу услуги →</span></a></article>
-<article class="card engine-wash-card"><a class="service-card-link" href="<?php echo esc_url($avtospa_service_urls['Мойка двигателя']); ?>"><div class="service-icon">🔧</div><h3>Мойка двигателя</h3><p>Отдельное направление АвтоСпа. Возможность выполнения услуги и актуальные условия уточняйте по телефону.</p><span class="service-card-more">Подробнее об услуге →</span></a></article>
-<article class="card tire-service-card"><a class="service-card-link" href="<?php echo esc_url($avtospa_service_urls['Шиномонтаж']); ?>"><div class="service-icon">🛞</div><h3>Шиномонтаж</h3><p>Запишитесь на шиномонтаж по телефону и согласуйте удобное время.</p><span class="service-card-more">Страница шиномонтажа →</span></a></article>
+<section id="services" class="section"><div class="container"><div class="section-head"><div><span class="eyebrow">Профессиональный уход</span><h2>Услуги АвтоСпа</h2><p class="section-intro">Основные направления АвтоСпа: автомойка, мойка двигателя и шиномонтаж. Актуальные условия можно уточнить по телефону.</p></div></div><div class="cards">
+<article class="card photo-card"><a class="service-card-link" href="<?php echo esc_url($avtospa_service_urls['Автомойка']); ?>"><div class="service-photo"><img src="https://images.unsplash.com/photo-1683647115932-b33455fe6a3e?auto=format&fit=crop&fm=jpg&q=82&w=1000" alt="Профессиональная автомойка АвтоСпа" loading="lazy" decoding="async"></div><div class="service-card-body"><h3>Автомойка</h3><p>Профессиональная мойка и уход за автомобилем.</p><span class="service-card-more">Открыть страницу услуги →</span></div></a></article>
+<article class="card photo-card engine-wash-card"><a class="service-card-link" href="<?php echo esc_url($avtospa_service_urls['Мойка двигателя']); ?>"><div class="service-photo"><img src="https://images.unsplash.com/photo-1771340012319-0b4fca008b54?auto=format&fit=crop&fm=jpg&q=82&w=1000" alt="Работа с двигателем автомобиля" loading="lazy" decoding="async"></div><div class="service-card-body"><h3>Мойка двигателя</h3><p>Аккуратный профессиональный уход и обслуживание.</p><span class="service-card-more">Подробнее об услуге →</span></div></a></article>
+<article class="card photo-card"><a class="service-card-link" href="<?php echo esc_url($avtospa_service_urls['Шиномонтаж']); ?>"><div class="service-photo"><img src="https://images.unsplash.com/photo-1645445522156-9ac06bc7a767?auto=format&fit=crop&fm=jpg&q=82&w=1000" alt="Шиномонтаж АвтоСпа" loading="lazy" decoding="async"></div><div class="service-card-body"><h3>Шиномонтаж</h3><p>Работа с колёсами, шинами и сезонной заменой.</p><span class="service-card-more">Записаться →</span></div></a></article>
 </div></div></section>
 <section id="engine-wash" class="section engine-section"><div class="container"><div class="engine-box"><div class="engine-copy"><span class="eyebrow">Отдельная услуга</span><h2>Мойка двигателя</h2><p>Мойка двигателя — отдельное направление АвтоСпа. Возможность выполнения услуги и актуальные условия уточняйте по телефону.</p><a class="button button-primary" href="<?php echo esc_url($avtospa_service_urls['Мойка двигателя']); ?>">Открыть страницу услуги</a></div><div class="engine-note"><span class="service-icon">🔧</span><strong>Мойка двигателя</strong><span>АвтоСпа • Москва</span></div></div></div></section>
 <section id="tire-service" class="section tire-section"><div class="container"><div class="tire-box"><div><span class="eyebrow">Шиномонтаж</span><h2>Запись на шиномонтаж</h2><p>Позвоните в АвтоСпа, чтобы уточнить актуальные условия и согласовать удобное время.</p></div><div class="tire-actions"><a class="button button-primary tire-cta" href="tel:<?php echo esc_attr(avtospa_phone_href()); ?>">📞 Записаться по телефону</a><a class="button tire-cta" href="<?php echo esc_url($avtospa_service_urls['Шиномонтаж']); ?>">Страница шиномонтажа</a></div></div></div></section>
