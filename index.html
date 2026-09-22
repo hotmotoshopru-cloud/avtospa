@@ -29,11 +29,28 @@
 </style>
 
 <style>.footer-nav .footer-service-link{display:inline-flex;align-items:center;gap:5px;padding:8px 13px;border-radius:10px;background:#ff8a3d;color:#fff!important;box-shadow:0 7px 18px rgba(255,138,61,.2)}.footer-nav .footer-service-link:hover{background:#f47728;color:#fff!important;transform:translateY(-1px)}</style>
+
+<style>
+/* Фирменный стиль АвтоСпа — логотип №4 */
+:root{--accent:#159ed6;--accent2:#72b83f;--blue:#159ed6;--mint:#eaf8ff;--peach:#eef9e7;--sky:#eaf8ff;--line:#cfe9f5;--ink:#124f7d;--muted:#5c7e98}
+.brand{gap:9px;align-items:center}.avtospa-logo{width:48px;height:58px;flex:0 0 auto;filter:drop-shadow(0 5px 10px rgba(18,112,170,.16))}.brand-text-wrap{display:flex;flex-direction:column;line-height:1}.brand-name{font-size:28px;color:#159ed6;letter-spacing:-.055em}.brand-text-wrap small{margin-top:5px;font-size:7px;letter-spacing:.06em;color:#174b73;font-weight:900;white-space:nowrap}
+.hero{background:linear-gradient(135deg,#eaf9ff 0%,#fff 46%,#eef9e7 100%);padding-top:70px}.hero:before{background:rgba(21,158,214,.14)}.hero:after{background:rgba(114,184,63,.15)}.hero-grid{gap:42px}.hero h1{color:#124f7d}.hero-h1-accent{color:#159ed6}.hero-visual{position:relative;border-radius:36px;padding:18px;background:linear-gradient(145deg,#effaff,#f6fff0);border:2px solid rgba(21,158,214,.18);box-shadow:0 22px 55px rgba(21,126,174,.15);overflow:hidden}.hero-visual:before{content:"";position:absolute;inset:10px auto auto 50%;width:260px;height:320px;transform:translateX(-50%);border:3px solid rgba(21,158,214,.12);border-radius:52% 52% 45% 45%;clip-path:polygon(50% 0,100% 48%,88% 78%,50% 100%,12% 78%,0 48%)}.hero-visual:after{content:"";position:absolute;right:28px;bottom:85px;width:100px;height:48px;background:linear-gradient(135deg,#a4db46,#4b9f3e);border-radius:100% 0 100% 0;transform:rotate(-18deg);opacity:.9}.hero-visual-label{background:#eaf8ff;color:#0754a5}.hero-visual-brand strong{color:#159ed6}.hero-visual-brand span{color:#4e7792}.hero-bubble{background:#8bd7f3!important}.button-primary{background:linear-gradient(135deg,#159ed6,#0874c2)}.button-primary:hover{background:linear-gradient(135deg,#0874c2,#159ed6)}.button-secondary{border-color:#b9e3f2}.booking-button{background:#159ed6}.tire-booking-banner{background:linear-gradient(135deg,#effaff,#f4fbea)}.tire-booking-card{border-color:#cbe9f4;background:linear-gradient(135deg,#fff,#effaff);box-shadow:0 18px 45px rgba(21,126,174,.10)}.tire-booking-visual{background:#eaf8ff}.booking-kicker{background:#eaf8ff;color:#0754a5}.booking-badge{border-color:#d5ebc8;background:#f8fff4}.service-icon{background:#eaf8ff}.engine-wash-card .service-icon{background:#eef9e7}.engine-section{background:linear-gradient(135deg,#eefaff,#fff 52%,#f1fae9)}.section.alt{background:linear-gradient(135deg,#f0fbff,#f5fbe9)}.card:hover{border-color:#b8dfc5}.internal-link-card{border-color:#cfe9f5}.footer-brand{display:inline-flex;align-items:center;gap:10px;font-size:27px;color:#159ed6!important;font-weight:900;text-decoration:none}.footer-logo-mark{width:42px;height:52px;flex:0 0 auto}.footer-main{gap:8px}.site-footer{background:linear-gradient(135deg,#eaf8ff,#f2fae9)!important;border-top:1px solid #cbe8f3}.footer-bottom{border-top-color:#cbe8f3}
+</style>
 </head>
 <body>
 <header class="site-header">
   <div class="container header-inner">
-    <a class="brand" href="#top" aria-label="АвтоСпа — главная"><span class="brand-mark">✦</span><span class="brand-name">АвтоСпа</span></a>
+    <a class="brand" href="#top" aria-label="АвтоСпа — главная">
+<svg class="avtospa-logo" viewBox="0 0 82 100" aria-hidden="true">
+ <defs><linearGradient id="logoBlue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#13b5ef"/><stop offset="1" stop-color="#0754a5"/></linearGradient><linearGradient id="logoGreen" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9bd63c"/><stop offset="1" stop-color="#3d9e3d"/></linearGradient></defs>
+ <path d="M41 3C28 19 9 37 9 58c0 20 14 35 32 35s32-15 32-35C73 37 54 19 41 3Z" fill="url(#logoBlue)"/>
+ <path d="M12 69c9-5 19-7 29-5 9 2 17 7 25 15-8 10-17 15-26 15-14 0-24-9-28-25Z" fill="url(#logoGreen)"/>
+ <path d="M20 59c3-17 12-27 21-27 9 0 18 10 21 27-13-8-28-8-42 0Z" fill="#fff" opacity=".96"/>
+ <path d="M28 56h27l-4-11H33l-5 11Z" fill="#0b5ca9"/>
+ <path d="M38 18l3 7 7 3-7 3-3 7-3-7-7-3 7-3 3-7Z" fill="#fff"/>
+</svg>
+<span class="brand-text-wrap"><span class="brand-name">АвтоСпа</span><small>АВТОМОЙКА • ШИНОМОНТАЖ • АВТОСЕРВИС</small></span>
+</a>
     <nav class="main-nav" aria-label="Основное меню">
       <ul>
         <li><a href="https://xn----7sbahh7ahckdsdbhab2avgnqe8g.xn--p1ai/">Главная</a></li>
@@ -138,7 +155,7 @@
 <footer class="site-footer">
   <div class="container footer-inner footer-inner-full">
     <div class="footer-main">
-      <a class="footer-brand" href="#top">АвтоСпа</a>
+      <a class="footer-brand" href="#top"><svg class="footer-logo-mark" viewBox="0 0 82 100" aria-hidden="true"><defs><linearGradient id="fBlue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#13b5ef"/><stop offset="1" stop-color="#0754a5"/></linearGradient><linearGradient id="fGreen" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9bd63c"/><stop offset="1" stop-color="#3d9e3d"/></linearGradient></defs><path d="M41 3C28 19 9 37 9 58c0 20 14 35 32 35s32-15 32-35C73 37 54 19 41 3Z" fill="url(#fBlue)"/><path d="M12 69c9-5 19-7 29-5 9 2 17 7 25 15-8 10-17 15-26 15-14 0-24-9-28-25Z" fill="url(#fGreen)"/><path d="M20 59c3-17 12-27 21-27 9 0 18 10 21 27-13-8-28-8-42 0Z" fill="#fff"/><path d="M28 56h27l-4-11H33l-5 11Z" fill="#0b5ca9"/><path d="M38 18l3 7 7 3-7 3-3 7-3-7-7-3 7-3 3-7Z" fill="#fff"/></svg><span>АвтоСпа</span></a>
       <div class="footer-note">Автомойка • Мойка двигателя • Шиномонтаж • Москва</div>
     </div>
     <nav class="footer-nav" aria-label="Меню в подвале">
