@@ -13,8 +13,7 @@
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="<?php echo esc_url(home_url('/')); ?>" aria-label="АвтоСпа — главная">
-      <span class="brand-mark" aria-hidden="true"><span>✦</span></span>
-      <span class="brand-name">АвтоСпа</span>
+      <img class="brand-logo-img" src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/logo4.svg'); ?>" alt="АвтоСпа — автомойка, шиномонтаж, автосервис">
     </a>
     <nav class="main-nav" aria-label="Основное меню">
       <?php wp_nav_menu(array('theme_location'=>'primary','container'=>false,'fallback_cb'=>'avtospa_fallback_menu')); ?>
