@@ -1,39 +1,58 @@
 document.addEventListener('DOMContentLoaded',function(){
-const b=document.querySelector('.mobile-toggle'),m=document.getElementById('mobile-menu');
-if(b&&m){
- const close=()=>{b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Открыть меню');m.hidden=true;document.body.classList.remove('mobile-menu-open');};
- const openMenu=()=>{
-  b.setAttribute('aria-expanded','true');b.setAttribute('aria-label','Закрыть меню');m.hidden=false;document.body.classList.add('mobile-menu-open');
-  const wa=document.body.dataset.whatsapp||'';const tg=document.body.dataset.telegram||'';const home=document.body.dataset.homeUrl||'/';const phone=document.body.dataset.phone||'';const phoneDisplay=document.body.dataset.phoneDisplay||phone;
-  const escAttr=(value)=>String(value).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-  const safeWa=escAttr(wa),safeTg=escAttr(tg),safeHome=escAttr(home),safePhone=escAttr(phone);
-  let social='';
-  if(wa){social+='<a class="mobile-social mobile-whatsapp" href="'+safeWa+'" target="_blank" rel="noopener noreferrer"><span>◉</span><span>WhatsApp</span></a>';}
-  if(tg){social+='<a class="mobile-social mobile-telegram" href="'+safeTg+'" target="_blank" rel="noopener noreferrer"><span>➤</span><span>Telegram</span></a>';}
-  const link=(id)=>safeHome+'#'+id;
-  m.innerHTML='<nav class="mobile-nav" aria-label="Мобильное меню"><div class="mobile-nav-title"><span>АвтоСпа</span><small>Услуги и запись</small></div><a href="'+link('services')+'"><span class="mobile-nav-icon">🚿</span><span>Автомойка и услуги</span></a><a href="'+link('engine-wash')+'"><span class="mobile-nav-icon">🔧</span><span>Мойка двигателя</span></a><a class="mobile-tire-link" href="'+link('tire-booking')+'"><span class="mobile-nav-icon">🛞</span><span>Шиномонтаж</span><em>Запись</em></a><a href="'+link('reviews-location')+'"><span class="mobile-nav-icon">🗺️</span><span>Карта и отзывы</span></a><a href="'+link('contacts')+'"><span class="mobile-nav-icon">📍</span><span>Контакты</span></a><a class="mobile-nav-external" href="https://xn----7sbbgabsz5cgqkebg.su/" target="_blank" rel="noopener noreferrer"><span class="mobile-nav-icon">🔧</span><span>Автосервис Автотех ↗</span></a>'+social+(phone?'<a class="mobile-call" href="tel:'+safePhone+'"><span>☎ Позвонить</span><strong>'+phone+'</strong></a>':'')+'</nav>';
-  m.querySelectorAll('.mobile-nav a').forEach((a,i)=>{a.style.setProperty('--mobile-delay',(i*40)+'ms');a.addEventListener('click',close);});
-  const first=m.querySelector('.mobile-nav a');if(first){window.setTimeout(()=>first.focus(),50);}
- };
- b.addEventListener('click',function(){b.getAttribute('aria-expanded')==='true'?close():openMenu();});
- document.addEventListener('keydown',function(e){if(e.key==='Escape'&&b.getAttribute('aria-expanded')==='true'){close();b.focus();}});
- document.addEventListener('click',function(e){if(b.getAttribute('aria-expanded')==='true'&&!m.contains(e.target)&&!b.contains(e.target))close();});
-  window.addEventListener('resize',function(){if(window.innerWidth>980&&b.getAttribute('aria-expanded')==='true')close();},{passive:true});
-}
+  const button=document.querySelector('.mobile-toggle');
+  const panel=document.getElementById('mobile-menu');
+  if(!button||!panel){return;}
 
-const style=document.createElement('style');style.textContent='.service-card-enhanced{position:relative;isolation:isolate}.service-card-enhanced:before{content:"";position:absolute;inset:auto -35px -55px auto;width:150px;height:150px;border-radius:50%;background:radial-gradient(circle,rgba(88,185,232,.25),rgba(88,185,232,0) 70%);pointer-events:none;transition:transform .35s ease}.service-card-enhanced:hover:before{transform:scale(1.45)}.service-card-enhanced .service-number{position:absolute;right:18px;top:18px;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#e8f7ff;color:#1683b5;font-size:12px;font-weight:900;z-index:2}.service-card-enhanced.service-card-tire{background:linear-gradient(145deg,#fff,#fff6ec);border-color:#ffd8b8}.service-card-enhanced.service-card-engine{background:linear-gradient(145deg,#fff,#f2faff);border-color:#cdeaf7}.service-card-enhanced.service-card-wash{background:linear-gradient(145deg,#fff,#f0f9ff);border-color:#cbeaf7}.service-card-enhanced .service-icon{box-shadow:0 10px 22px rgba(52,139,190,.10)}.scroll-reveal{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s ease}.scroll-reveal.is-visible{opacity:1;transform:none}@media(prefers-reduced-motion:reduce){.scroll-reveal{opacity:1;transform:none;transition:none}.service-card-enhanced:before{transition:none}}';document.head.appendChild(style);
+  const home=document.body.dataset.homeUrl||'/';
+  const phone=document.body.dataset.phone||'+79162999859';
+  const phoneDisplay=document.body.dataset.phoneDisplay||phone;
+  const wa=document.body.dataset.whatsapp||'https://wa.me/79162999859';
+  const tg=document.body.dataset.telegram||'https://t.me/+79162999859';
 
-const mobileStyle=document.createElement('style');mobileStyle.textContent='.mobile-nav-title{display:flex;align-items:flex-end;justify-content:space-between;padding:4px 7px 8px;color:var(--accent);font-weight:900}.mobile-nav-title small{color:var(--muted);font-size:10px;font-weight:700}.mobile-nav a{gap:10px}.mobile-nav-icon{width:28px;height:28px;display:inline-flex;align-items:center;justify-content:center;border-radius:9px;background:#eef8ff;flex:0 0 28px}.mobile-nav a em{margin-left:auto;font-style:normal;font-size:10px;color:#bd6b2b;background:#fff0df;padding:5px 8px;border-radius:999px}.mobile-nav a:not(.mobile-call){animation:mobileNavIn .35s ease both;animation-delay:var(--mobile-delay)}.mobile-menu-open .mobile-panel{animation:mobilePanelIn .22s ease both}.mobile-social{border:1px solid #cceee9!important;background:#fff!important}.mobile-whatsapp{color:#1683b5!important}.mobile-telegram{color:#3689c9!important}.mobile-tire-link{background:linear-gradient(90deg,#f1fffc,#fff7ed)}.mobile-call{justify-content:space-between!important;gap:8px}.mobile-call strong{font-size:11px;opacity:.9}@keyframes mobilePanelIn{from{opacity:0;transform:translateY(-7px)}to{opacity:1;transform:none}}@keyframes mobileNavIn{from{opacity:0;transform:translateX(-8px)}to{opacity:1;transform:none}}@media(prefers-reduced-motion:reduce){.mobile-nav a,.mobile-menu-open .mobile-panel{animation:none!important}}';document.head.appendChild(mobileStyle);
+  const esc=(value)=>String(value).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  const page=(path)=>esc(home.replace(/\/$/,'/')+path.replace(/^\//,''));
 
-const navHashLinks=document.querySelectorAll('.main-nav a[href*="#"]');
-navHashLinks.forEach(function(link){
- const href=link.getAttribute('href')||'';
- if(href.indexOf('#')===-1){return;}
- const hash=href.split('#')[1];
- if(window.location.hash==='#'+hash){link.setAttribute('aria-current','page');}
-});
-const cards=document.querySelectorAll('#services .card');cards.forEach(function(card,index){card.classList.add('service-card-enhanced');card.classList.add(index===0?'service-card-wash':index===1?'service-card-engine':'service-card-tire');const n=document.createElement('span');n.className='service-number';n.textContent='0'+(index+1);n.setAttribute('aria-hidden','true');card.appendChild(n);});
-const revealTargets=document.querySelectorAll('.section .card,.engine-box,.tire-box,.autotech-banner-inner,.reviews-location-grid>div,.benefit,.contact-card,.faq details');revealTargets.forEach(function(el,i){el.classList.add('scroll-reveal');el.style.transitionDelay=Math.min(i*35,180)+'ms';});
-if('IntersectionObserver' in window){const io=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('is-visible');io.unobserve(entry.target);}});},{threshold:.12});revealTargets.forEach(function(el){io.observe(el);});}else{revealTargets.forEach(function(el){el.classList.add('is-visible');});}
-const header=document.querySelector('.site-header');if(header){window.addEventListener('scroll',function(){header.classList.toggle('header-scrolled',window.scrollY>8);},{passive:true});const hs=document.createElement('style');hs.textContent='.site-header.header-scrolled{box-shadow:0 10px 28px rgba(52,139,190,.08)}';document.head.appendChild(hs);}
+  const closeMenu=()=>{
+    button.setAttribute('aria-expanded','false');
+    button.setAttribute('aria-label','Открыть меню');
+    panel.hidden=true;
+    document.body.classList.remove('mobile-menu-open');
+  };
+
+  const openMenu=()=>{
+    button.setAttribute('aria-expanded','true');
+    button.setAttribute('aria-label','Закрыть меню');
+    panel.hidden=false;
+    document.body.classList.add('mobile-menu-open');
+
+    panel.innerHTML='<nav class="mobile-nav" aria-label="Мобильное меню">'+
+      '<div class="mobile-nav-title"><span>АвтоСпа</span><small>Услуги и запись</small></div>'+
+      '<a href="'+page('')+'">Главная</a>'+
+      '<a href="'+page('sample-page/')+'">Автомойка</a>'+
+      '<a href="'+page('мойка-двигателя-автомобиля/')+'">Мойка двигателя</a>'+
+      '<a class="mobile-tire-link" href="'+page('шиномонтаж/')+'">Шиномонтаж <em>Запись</em></a>'+
+      '<a href="'+page('автомойка-цены/')+'">Цены на автомойку</a>'+
+      '<a href="'+page('шиномонтаж-цены/')+'">Цены на шиномонтаж</a>'+
+      '<a href="'+page('контакты/')+'">Контакты</a>'+
+      '<a class="mobile-nav-external" href="https://xn----7sbbgabsz5cgqkebg.su/" target="_blank" rel="noopener noreferrer">🔧 Автосервис Автотех ↗</a>'+
+      '<a class="mobile-social mobile-whatsapp" href="'+esc(wa)+'" target="_blank" rel="noopener noreferrer">◉ WhatsApp</a>'+
+      '<a class="mobile-social mobile-telegram" href="'+esc(tg)+'" target="_blank" rel="noopener noreferrer">➤ Telegram</a>'+
+      '<a class="mobile-call" href="tel:'+esc(phone)+'"><span>☎ Позвонить</span><strong>'+esc(phoneDisplay)+'</strong></a>'+
+    '</nav>';
+
+    panel.querySelectorAll('.mobile-nav a').forEach(a=>a.addEventListener('click',closeMenu));
+  };
+
+  button.addEventListener('click',function(){
+    button.getAttribute('aria-expanded')==='true'?closeMenu():openMenu();
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&button.getAttribute('aria-expanded')==='true'){closeMenu();button.focus();}
+  });
+  document.addEventListener('click',function(e){
+    if(button.getAttribute('aria-expanded')==='true'&&!panel.contains(e.target)&&!button.contains(e.target)){closeMenu();}
+  });
+  window.addEventListener('resize',function(){
+    if(window.innerWidth>1000&&button.getAttribute('aria-expanded')==='true'){closeMenu();}
+  },{passive:true});
 });
