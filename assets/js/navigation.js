@@ -19,6 +19,36 @@ document.addEventListener('DOMContentLoaded',function(){
     document.body.classList.remove('mobile-menu-open');
   };
 
+  const desktopDropdowns=document.querySelectorAll('.main-nav .has-dropdown > a');
+  desktopDropdowns.forEach(function(link){
+    link.setAttribute('aria-expanded','false');
+    link.addEventListener('click',function(e){
+      if(window.innerWidth<=1000){return;}
+      e.preventDefault();
+      const item=link.parentElement;
+      const isOpen=item.classList.contains('open');
+      document.querySelectorAll('.main-nav .has-dropdown.open').forEach(function(openItem){
+        openItem.classList.remove('open');
+        const openLink=openItem.querySelector(':scope > a');
+        if(openLink){openLink.setAttribute('aria-expanded','false');}
+      });
+      if(!isOpen){
+        item.classList.add('open');
+        link.setAttribute('aria-expanded','true');
+      }
+    });
+  });
+  document.addEventListener('click',function(e){
+    if(window.innerWidth<=1000){return;}
+    if(!e.target.closest('.main-nav .has-dropdown')){
+      document.querySelectorAll('.main-nav .has-dropdown.open').forEach(function(item){
+        item.classList.remove('open');
+        const itemLink=item.querySelector(':scope > a');
+        if(itemLink){itemLink.setAttribute('aria-expanded','false');}
+      });
+    }
+  });
+
   const openMenu=()=>{
     button.setAttribute('aria-expanded','true');
     button.setAttribute('aria-label','Закрыть меню');
@@ -53,6 +83,7 @@ document.addEventListener('DOMContentLoaded',function(){
     if(button.getAttribute('aria-expanded')==='true'&&!panel.contains(e.target)&&!button.contains(e.target)){closeMenu();}
   });
   window.addEventListener('resize',function(){
+    if(window.innerWidth>1000){document.querySelectorAll('.main-nav .has-dropdown.open').forEach(function(item){item.classList.remove('open');const itemLink=item.querySelector(':scope > a');if(itemLink){itemLink.setAttribute('aria-expanded','false');}});}
     if(window.innerWidth>1000&&button.getAttribute('aria-expanded')==='true'){closeMenu();}
   },{passive:true});
 });
